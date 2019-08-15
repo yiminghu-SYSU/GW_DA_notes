@@ -334,7 +334,7 @@
 \newcommand{\rremark}[1]{\text{{\color{purple}{注}}} \ref{#1}}
 \newcommand{\rfig}[1]{\text{{\color{purple}{图}}} \ref{#1}}
 \newcommand{\rtab}[1]{\text{{\color{purple}{表}}} \ref{#1}}
-\newcommand{\rprop}[1]{\text{{\color{purple}{性质}}} \ref{#1}}
+\newcommand{\rprop}[1]{\text{{\color{purple}{材料}}} \ref{#1}}
 \newcommand{\rdef}[1]{\text{{\color{purple}{定义}}} \ref{#1}}
 \newcommand{\rthm}[1]{\text{{\color{purple}{定理}}} \ref{#1}}
 \newcommand{\mylem}[1]{\text{引理} \ref{#1}}  
