@@ -37,7 +37,7 @@ t' &{}= t \\
 x' &{}= x-vt\\
 y' &{}= y \\
 z' &{}= z 
-\end{array}
+\end{array}\label{eq:galileo}
 \end{equation}
 
 实际上，这种朴素的相对论性原理是非常直观的，在《尚书纬·考灵曜(y{\` a}o)》中，就有文字表达了相当类似的想法：
@@ -46,17 +46,22 @@ z' &{}= z
 \end{myprop}
 
 \subsection{Maxwell方程组}
-通过对电与磁的性质的研究，Maxwell总结了著名的Maxwell方程组，用以描述电磁波的性质。
+通过对电与磁的性质的研究，Maxwell总结了著名的方程组，用以描述电磁场的一般性质。
 \begin{equation}
 \begin{array}{r@{}l}
-\nabla \cdot \mathbf {E} ={\frac {\rho }{\varepsilon _{0}}}\\
-\nabla \cdot \mathbf {B} =0
-\nabla \times \mathbf {E} =-{\frac {\partial \mathbf {B} }{\partial t}}
-\nabla \times \mathbf {B} =\mu _{0}\left(\mathbf {J} +\varepsilon _{0}{\frac {\partial \mathbf {E} }{\partial t}}\right)
-\end{array}
+\nabla \cdot \mathbf {E} &{}= {\frac {\rho }{\varepsilon _{0}}}\\
+\nabla \cdot \mathbf {B} &{}= 0\\
+\nabla \times \mathbf {E}&{}=-{\frac {\partial \mathbf {B} }{\partial t}}\\
+\nabla \times \mathbf {B}&{}=\mu _{0}\left(\mathbf {J} +\varepsilon _{0}{\frac {\partial \mathbf {E} }{\partial t}}\right)
+\end{array}\label{eq:maxwell}
 \end{equation}
-他注意到电磁波的速度$c$取决于真空电容率$\epsilon_0$与真空磁导率$\mu_0$：
+Maxwell注意到，通过Maxwell方程组，可以推导出，
 \begin{equation}
-c^2 = \frac{1}{\epsilon_0 \mu_0}
+\nabla ^2 \mathbf {E} - \varepsilon_{0} \mu_0 \frac {\partial^2 \mathbf {E} }{\partial^2 t}
 \end{equation}
+电磁场的变化以波动形式传播，即为电磁波，其的速度$c$取决于真空电容率$\epsilon_0$与真空磁导率$\mu_0$：
+\begin{equation}
+c^2 = \frac{1}{\varepsilon_0 \mu_0}
+\end{equation}
+从数值上，$c$的取值与当时已经从实验上测得的光速极为接近，这使得他大胆假设：光就是一种电磁波。
 
