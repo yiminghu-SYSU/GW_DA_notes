@@ -39,7 +39,7 @@ y' &{}= y \\
 z' &{}= z 
 \end{array}\label{eq:galileo}
 \end{equation}
-这种变换通常被称为Galileo变换。
+这种变换通常被称为Galilean变换。
 
 实际上，这种朴素的相对论性原理是非常直观的，在《尚书纬·考灵曜(y{\` a}o)》中，就有文字表达了相当类似的想法：
 \begin{myprop}{}{}
@@ -60,16 +60,20 @@ z' &{}= z
 其中$\varepsilon_0$为真空电容率，$\mu_0$为真空磁导率。
 
 Maxwell注意到，通过Maxwell方程组，可以推导出，
-\begin{equation}
+\begin{equation}\label{eq:EMwave}
 \nabla ^2 \mathbf {B} - \varepsilon_{0} \mu_0 \frac {\partial^2 \mathbf {B} }{\partial^2 t}= 0
 \end{equation}
 不难看出，电磁场的变化以波动形式传播，其速度$c$取决于：
-\begin{equation}
-c^2 = \frac{1}{\varepsilon_0 \mu_0} \end{equation} 从数值上，$c$的取值与当时已经从实验上测得的光速极为接近，这使得他大胆假设：光就是一种电磁波。
+\begin{equation}\label{eq:SpeedOfLight}
+c^2 = \frac{1}{\varepsilon_0 \mu_0}
+\end{equation} 
+从数值上，$c$的取值与当时已经从实验上测得的光速极为接近，这使得他大胆假设：光就是一种电磁波。
 
-然而，Maxwell方程组与Galileo变换是不自洽的。
-考虑在运动的船S'上进行电磁学测量，根据Galileo变换，电磁场的传播方程变为
+然而，Maxwell方程组与Galilean变换是不自洽的。
+考虑在运动的船S'上进行电磁学测量，根据Galilean变换\ref{eq:galileo}，电磁场的传播方程\ref{eq:EMwave}变为
 
 \begin{equation}
 c^2\nabla^2 \textbf B = \frac{\partial^2 \textbf B}{\partial t^2} + (\textbf v \cdot \nabla)^2 \textbf B - 2 \textbf v \cdot \nabla \left(\frac{\partial \textbf B}{\partial t}\right)
 \end{equation}
+
+一个平庸的结论是，通过Galilean变换，船上的物理学家将测得光速变为$v\pm v$
