@@ -89,8 +89,26 @@ Lorentz 和Poincar{\'e}第一次意识到，如果S坐标系和S'坐标系之间
 t'&{}=\gamma \left(t-{\frac {vx}{c^{2}}}\right)\\
 x'&{}=\gamma \left(x-vt\right)\\
 y'&{}=y\\
-z'&{}=z
-\end{array}
+z'&{}=z\\
+  \gamma &{}= \frac{1}{{\sqrt {1-v^{2}/c^{2}}}}
+\end{array}\label{eq:lorentz}
 \end{equation}
-的形式的话，那么
+的形式的话，那么Maxwell方程组(公式\ref{eq:maxwell})在所有的惯性系中都能成立。
+形如公式\ref{eq:lorentz}的变换称为Lorentz变换(Lorentz transformation)，我们可以说，Maxwell方程组在不同的惯性系中，通过Lorentz变换维持了不变性。
 
+从某种意义上说，Lorentz变换就是\SR 的精髓。
+但物理学界今天达成共识，认为是Einstein而非Lorentz或Poincar{\'e}发明了狭义相对论，这是因为Einstein第一次严肃地认为Lorentz变换体现了时间与空间的本质，而非简单的数学玩具。
+由此，时间与空间并非完全独立，而是交织在一起，甚至可以互换。
+要标记一个事件，必须同时标记其在某个惯性系下的空间坐标(x,y,z)和时间坐标t。
+对于两个事件，在S坐标系下看来可能是同时发生的($\Delta t=0$)，但在S'坐标系看来却可能发生于不同时间（$\Delta t \neq 0$）。
+在不同的惯性系下，通过Lorentz变化，两个不同事件之间，保持不变的，是事件间时间间隔和空间间隔的某种组合，称为时空间隔离：
+\begin{equation}\label{eq:STinterval}
+  \Delta s^2 = - (c\Delta t)^2+ \Delta x ^2 + \Delta y^2+ \Delta z^2
+\end{equation}
+通常其微分形式使用起来更为方便：
+\begin{equation}\label{eq:STinterval_diff}
+  {\rm d}s^2 = - (c{\rm d}t)^2+ {\rm d}x ^2 + {\rm d} y^2+ {\rm d} z^2
+\end{equation}
+在Lorentz变换下，${\rm d}s^2$保持不变。
+
+\subsection{张量初步}

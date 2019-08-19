@@ -18,7 +18,7 @@ git-tag:
 	./git-tag.sh
 
 main.pdf : main.tex  $(FIGS) $(BIBLIO) $(TEX) $(TEMPLATE)
-	xelatex $(@:.pdf=) && biber --debug $(@:.pdf=) && xelatex $(@:.pdf=) && xelatex $(@:.pdf=) 
+	xelatex -no-pdf $(@:.pdf=) && biber --debug $(@:.pdf=) && xelatex $(@:.pdf=) && xelatex $(@:.pdf=) 
 	#pdflatex $(@:.pdf=) && pdflatex $(@:.pdf=) && pdflatex $(@:.pdf=)
 	#pdflatex $(@:.pdf=) && bibtex $(@:.pdf=) && pdflatex $(@:.pdf=) && pdflatex $(@:.pdf=)
 
