@@ -135,6 +135,11 @@ $x^0= ct$的选取是使得所有的坐标都有着相同的空间量纲，而$x
 度规张量在Lorentz变换下，遵从一定的变换规则，使得公式\ref{eq:STinterval_diff_new}维持不变量。
 也就是说，通过公式\ref{eq:STinterval_diff_new}，我们可以把随坐标变换而改变的${\rm }x^{\alpha} $ 转化成不随坐标变换而改变的时空间隔${\rm d} s^2$。
 
+度规也自然地定义了在坐标系中两个矢量$\mathbf{A}$和$\mathbf{B}$的内积
+\begin{equation}\label{eq:InnerProduct}
+  \mathbf{A}\cdot\mathbf{B}= \eta_ {\alpha \beta}A^\alpha B^\beta
+\end{equation}
+
 \subsection{\GR 初步}
 Einstein的\SR，虽然可以将牛顿框架下的绝对空间观点移除，但惯性系仍然在所有的坐标系中占据一个特殊的位置。\footnote{扩展阅读：\cite{RindlerGR}等著作中关于Mach's principle和Isaac Newton's rotating bucket argument (also known as Newton's bucket)的讨论。}
 由此探究了十年时间之后，Einstein最终得到了\GR ，并最终将惯性系的特殊性也彻底移除。
@@ -143,9 +148,22 @@ Einstein观察到，在Newtonian力学体系中，质量$m$这个概念出现在
 两者的语境完全不同，而实验可以证明在实验精度内$m_I = m_G$精确成立。
 两种质量的严格相等，通常被称为“弱”等效原理。\footnote{需要注意，弱等效原理的表述方式有很多，但是几种表述互相之间均等效。}
 
+拥有相同质量的物体，可以拥有完全不同的电量，由此在电场中受到不同的电磁力作用。
+然而拥有相同惯性质量$m_I$的物体，一定拥有相同的引力质量$m_G$，这也就暗示了引力作用从本质上和其他相互作用的区别。
 在\SR 的语境中，物理学家无法通过任何局部开展的实验了解自己所处的船舱是否处于均匀运动状态。
 而弱等效原理中，物理学家无法通过实验分辨船舱是在加速（由$m_I$确定，服从Newton's second law of motion）还是受到了引力作用（由$m_g$确定，服从引力作用）。
 既然加速度和引力等价，那么处于自由下落状态的实验室，所开展的所有{\heiti{局域(local)}}实验结果，都将完全一样，这一点与实验室的速度、所处的位置都不相关。
 这一等价性，被称为强等效原理。
 
-类似于
+根据强等效原理，所有在局域展开的物理实验，只要转换到自由落体状态的参考系下看，都是一致的。
+换言之，可以将自由落体参考系下的结果，通过合理的坐标变换，得到有引力时的表达式。
+最重要的，就是度规的转换。
+在自由落体状态时候，局部Lorentz坐标系$\xi^\mu$遵从Minkowski度规$\eta_{\mu\nu}$。
+假设一般的坐标系$x^\alpha$与局部Lorentz坐标系之间符合转换关系$\xi ^\mu= f^\mu (x^\alpha)$，则有 ${\rm d} \xi ^\mu = (\partial_\alpha f^\mu) {\rm d}x^\alpha$。
+可以得到
+\begin{equation}\label{eq:STinterval_diff_GR}
+\begin{array}{r@{}l}
+  {\rm d}s^2 &{} = \left( \eta_ {\mu \nu} \partial_\alpha f^\mu \partial_\beta f^\nu\right){\rm d} x^\alpha {\rm d} x^\beta\\
+  {\rm d}s^2 &{} = g_{\alpha\beta} {\rm d} x^\alpha {\rm d} x^\beta
+\end{array}
+\end{equation}
