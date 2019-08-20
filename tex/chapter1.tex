@@ -23,7 +23,7 @@
 
 \subsection{Galilean相对论}
 虽然在20世纪，相对论一次专指Einstein的理论，但是相对性原理(Principle of relativity)的思想在Newtonian力学中就有体现：两个服从Newtonian力学的、相对均匀运动的惯性参考系，无法通过在内部展开的力学实验进行区分。
-这一思想一般认为是Galileo在《关于Ptolemaic和 Copernican两大世界体系的对话》中首先提出的\cite{Fang2012blog}：
+这一思想一般认为是Galileo在《关于Ptolemaic和 Copernican两大世界体系的对话》中首先提出的\cite{Fang:2012blog}：
 \begin{myprop}{}{}
 把你和一些朋友关在一条大船的甲板下的主舱里，让你们带着几支苍蝇、蝴蝶和其他小飞虫，舱内放一支大碗，其中有几条鱼，然后，挂上一个水瓶，让水一滴一滴地滴到下面的一个宽口罐里。船停着不动时，你留神观察，小虫都以等速向舱内各方向飞行，鱼向各方向随便游动，水滴滴进下面的罐中。你把任何东西扔给你的朋友时，只要距离相等，向这一方向也不比向另一方向更多用力。你的双脚齐跳，无论向哪个方向跳过的距离都相等。当你仔细观察这些事情之后，再使船以任何速度前进，只要运动是均匀的，也不忽左忽右地摆动，你将发现，所有上述现象都没有丝毫变化，你无法从任何一个现象来确定，船是在运动还是在停着不动。即使船运动得相当快，在跳跃时，你也将和以前一样，你跳向船尾也不会比跳向船头更省力。
 \end{myprop}
@@ -80,7 +80,7 @@ c^2\nabla^2 \textbf B = \frac{\partial^2 \textbf B}{\partial t^2} + (\textbf v \
 然而更深刻的问题是，这一结论意味着，如果Galilean相对论是正确的，那么Maxwell方程组只能对某个特定惯性参考系成立，而物理学家可以根据电磁场的测量来确定实验室位于“船”上还是相对静止。
 Newtonian力学必须借助绝对绝对空间的概念，在坚持Galilean相对论的前提下，似乎可以得出，满足\ref{eq:EMwave}的参考系就是Newtonian力学概念中的绝对空间。
 
-其时，人们认为电磁波传播需要介质，而这种依附于绝对空间而具有独特性质的参考系，具象化为“以太(aether)”\cite{EleDyn1997}。
+其时，人们认为电磁波传播需要介质，而这种依附于绝对空间而具有独特性质的参考系，具象化为“以太(aether)”\cite{Yu:EleDyn1997}。
 
 \subsection{\SR}
 Lorentz 和Poincar{\'e}第一次意识到，如果S坐标系和S'坐标系之间的转换关系采用如
@@ -144,17 +144,29 @@ $x^0= ct$的选取是使得所有的坐标都有着相同的空间量纲，而$x
   该张量的表现形式在所有的坐标系中都一致。
 \end{myprop}
 
+在更一般的情形下，可以写成
+\begin{equation}\label{eq:metric}
+  {\rm d}s^2 = g_{\alpha \beta}{\rm d}x^\alpha {\rm d} x^\beta
+\end{equation}
 我们通常把$\eta_ {\alpha \beta}$称为Minkowski时空中的{\heiti{度规张量}}（metric tensor，在数学语境中通常翻译为度量张量，或者简称为Minkowski度规。
 度规张量在Lorentz变换下，遵从一定的变换规则，使得公式\ref{eq:STinterval_diff_new}维持不变量。
 也就是说，通过公式\ref{eq:STinterval_diff_new}，我们可以把随坐标变换而改变的${\rm }x^{\alpha} $ 转化成不随坐标变换而改变的时空间隔${\rm d} s^2$。
 
-度规也自然地定义了在坐标系中两个矢量$\mathbf{A}$和$\mathbf{B}$的内积
-\begin{equation}\label{eq:InnerProduct}
-  \mathbf{A}\cdot\mathbf{B}= \eta_ {\alpha \beta}A^\alpha B^\beta
+可以定义在坐标系中的矢量${\rm d}\vec{x} = \vec{e}_\alpha {\rm d}x^\alpha$。
+在坐标系变换过程中，由于坐标基底$\vec{e}_\alpha = \partial \vec{x}/ \partial x^\alpha$改变了，相应的矢量${\rm d}\vec{x} $在坐标基底上的分量${\rm d}x^\alpha$也会变化，但是矢量本身${\rm d}\vec{x} $是不变的。
+度规也自然地定义了在坐标系中两个矢量的内积。
+${\rm d}\vec{x}$与自己的内积是时空间隔${\rm d}s^2$，展开得：
+\begin{equation}\label{eq:InnerProduct1}
+  {\rm d}s^2 =  {\rm d}\vec{x}\cdot{\rm d}\vec{x} = \left(\vec{e}_\alpha \cdot \vec{e}_\beta \right) {\rm d}x^\alpha {\rm d}x^\beta
+\end{equation}
+通过与公式\ref{eq:metric}比较，可以发现$g_{\alpha\beta} = \vec{e}_\alpha \cdot \vec{e}_\beta$。
+更一般的，两个矢量$\vec{A} = A^\alpha \vec{e}_\alpha$和$\vec{B} = B^\alpha \vec{e}_\alpha$的内积可以写成
+\begin{equation}\label{eq:InnerProduct2}
+  \vec{A}\cdot\vec{B}= A^\alpha B^\beta \left(\vec{e}_\alpha \cdot \vec{e}_\beta \right) =  g_{\alpha \beta}A^\alpha B^\beta.
 \end{equation}
 
 \subsection{等效原理}
-Einstein的\SR，虽然可以将牛顿框架下的绝对空间观点移除，但惯性系仍然在所有的坐标系中占据一个特殊的位置。\footnote{扩展阅读：\cite{RindlerGR}等著作中关于Mach's principle和Isaac Newton's rotating bucket argument (also known as Newton's bucket)的讨论。}
+Einstein的\SR，虽然可以将牛顿框架下的绝对空间观点移除，但惯性系仍然在所有的坐标系中占据一个特殊的位置。\footnote{扩展阅读：\cite{Rindler:GR}等著作中关于Mach's principle和Isaac Newton's rotating bucket argument (also known as Newton's bucket)的讨论。}
 由此探究了十年时间之后，Einstein最终得到了\GR ，并最终将惯性系的特殊性也彻底移除。
 Einstein观察到，在Newtonian力学体系中，质量$m$这个概念出现在两个完全截然不同的地方：Newton's second law of motion 指出，物体所受的力$F=ma$,这里$a$为加速度，由此可以定义出惯性质量$m_I$。
 而在万有引力波公式中，Newton又指出，物体所受的引力与其质量大小成正比，由此定义了引力质量$m_G$。
@@ -164,20 +176,20 @@ Einstein观察到，在Newtonian力学体系中，质量$m$这个概念出现在
 拥有相同质量的物体，可以拥有完全不同的电量，由此在电场中受到不同的电磁力作用。
 然而拥有相同惯性质量$m_I$的物体，一定拥有相同的引力质量$m_G$，这也就暗示了引力作用从本质上和其他相互作用的区别。
 在\SR 的语境中，物理学家无法通过任何局部开展的实验了解自己所处的船舱是否处于均匀运动状态。
-而弱等效原理中，物理学家无法通过实验分辨船舱是在加速（由$m_I$确定，服从Newton's second law of motion）还是受到了引力作用（由$m_g$确定，服从引力作用）。
-既然加速度和引力等价，那么处于自由下落状态的实验室，所开展的所有{\heiti{局域(local)}}实验结果，都将完全一样，这一点与实验室的速度、所处的位置都不相关。
-这一等价性，被称为“强”等效原理。
+而弱等效原理中，物理学家无法通过实验分辨船舱是在加速（由$m_I$确定，服从Newton's second law of motion）还是受到了引力作用（由$m_g$确定，服从引力作用）。 既然加速度和引力等价，那么处于自由下落状态的实验室，所开展的所有{\heiti{局域(local)}}实验结果，都将完全一样，这一点与实验室的速度、所处的位置都不相关。
+这一等价性，被称为“强”等效原理。\cite{Schutz:FirstCourse}
 
 根据强等效原理，所有在局域展开的物理实验，只要转换到自由落体状态的参考系下看，都是一致的。
 换言之，可以将自由落体参考系下的结果，通过合理的坐标变换，得到有引力时的表达式。
 最重要的，就是度规的转换。
 在自由落体状态时候，局部Lorentz坐标系$\xi^\mu$遵从Minkowski度规$\eta_{\mu\nu}$。
 假设一般的坐标系$x^\alpha$与局部Lorentz坐标系之间符合转换关系$\xi ^\mu= f^\mu (x^\alpha)$，则有 ${\rm d} \xi ^\mu = (\partial_\alpha f^\mu) {\rm d}x^\alpha$。
-可以得到 \begin{equation}\label{eq:STinterval_diff_GR} \begin{array}{r@{}l}
-  {\rm d}s^2 &{} = \left( \eta_ {\mu \nu} \partial_\alpha f^\mu \partial_\beta f^\nu\right){\rm d} x^\alpha {\rm d} x^\beta\\
-  {\rm d}s^2 &{} = g_{\alpha\beta} {\rm d} x^\alpha {\rm d} x^\beta
-\end{array}
+可以得到 
+\begin{equation}\label{eq:STinterval_diff_GR} 
+  {\rm d}s^2 = \left( \eta_ {\mu \nu} \partial_\alpha f^\mu \partial_\beta f^\nu\right){\rm d} x^\alpha {\rm d} x^\beta
 \end{equation}
-这里$g_{\alpha\beta}$即为对应参考系的度规，它不一定要求位于局部惯性系中。
+与公式\ref{eq:metric}比较，可以得到，
+$g_{\alpha\beta} = \eta_ {\mu \nu} \partial_\alpha f^\mu \partial_\beta f^\nu$
+\footnote{由于本讲义旨在提供一个精炼、逻辑上大致完整的\GR 回顾，因此无法追求数学的完整性，在\GR 的描述中，涉及到诸如指标升降等细节，恕不展开。有兴趣的同学请自行翻阅相应参考文献}
 
 
