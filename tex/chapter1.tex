@@ -131,6 +131,19 @@ $x^0= ct$的选取是使得所有的坐标都有着相同的空间量纲，而$x
 \end{equation}
 注意到$\eta_{00} = -1$, 而$\eta_{11} = \eta_{22} = \eta_{33} = 1$，并且，根据{\heiti{Einstein 求和约定(Einstein summation convention)}}，如公式\ref{eq:STinterval_diff_new}一般，当某个希腊字母同时出现在上下标的时候，则意味着要对该字母求和。
 
+
+\begin{myprop}{}{}
+  有一个特殊的张量，即所谓Kronecker delta张量
+\begin{equation}\label{eq:Kronecker}
+  \delta_{\alpha\beta} ={\begin{pmatrix}
+                        1 & 0 & 0 & 0\\
+                        0 & 1 & 0 & 0\\ 
+                        0 & 0 & 1 & 0\\
+                        0 & 0 & 0 & 1\end{pmatrix}}
+\end{equation}
+  该张量的表现形式在所有的坐标系中都一致。
+\end{myprop}
+
 我们通常把$\eta_ {\alpha \beta}$称为Minkowski时空中的{\heiti{度规张量}}（metric tensor，在数学语境中通常翻译为度量张量，或者简称为Minkowski度规。
 度规张量在Lorentz变换下，遵从一定的变换规则，使得公式\ref{eq:STinterval_diff_new}维持不变量。
 也就是说，通过公式\ref{eq:STinterval_diff_new}，我们可以把随坐标变换而改变的${\rm }x^{\alpha} $ 转化成不随坐标变换而改变的时空间隔${\rm d} s^2$。
@@ -140,7 +153,7 @@ $x^0= ct$的选取是使得所有的坐标都有着相同的空间量纲，而$x
   \mathbf{A}\cdot\mathbf{B}= \eta_ {\alpha \beta}A^\alpha B^\beta
 \end{equation}
 
-\subsection{\GR 初步}
+\subsection{等效原理}
 Einstein的\SR，虽然可以将牛顿框架下的绝对空间观点移除，但惯性系仍然在所有的坐标系中占据一个特殊的位置。\footnote{扩展阅读：\cite{RindlerGR}等著作中关于Mach's principle和Isaac Newton's rotating bucket argument (also known as Newton's bucket)的讨论。}
 由此探究了十年时间之后，Einstein最终得到了\GR ，并最终将惯性系的特殊性也彻底移除。
 Einstein观察到，在Newtonian力学体系中，质量$m$这个概念出现在两个完全截然不同的地方：Newton's second law of motion 指出，物体所受的力$F=ma$,这里$a$为加速度，由此可以定义出惯性质量$m_I$。
@@ -153,17 +166,18 @@ Einstein观察到，在Newtonian力学体系中，质量$m$这个概念出现在
 在\SR 的语境中，物理学家无法通过任何局部开展的实验了解自己所处的船舱是否处于均匀运动状态。
 而弱等效原理中，物理学家无法通过实验分辨船舱是在加速（由$m_I$确定，服从Newton's second law of motion）还是受到了引力作用（由$m_g$确定，服从引力作用）。
 既然加速度和引力等价，那么处于自由下落状态的实验室，所开展的所有{\heiti{局域(local)}}实验结果，都将完全一样，这一点与实验室的速度、所处的位置都不相关。
-这一等价性，被称为强等效原理。
+这一等价性，被称为“强”等效原理。
 
 根据强等效原理，所有在局域展开的物理实验，只要转换到自由落体状态的参考系下看，都是一致的。
 换言之，可以将自由落体参考系下的结果，通过合理的坐标变换，得到有引力时的表达式。
 最重要的，就是度规的转换。
 在自由落体状态时候，局部Lorentz坐标系$\xi^\mu$遵从Minkowski度规$\eta_{\mu\nu}$。
 假设一般的坐标系$x^\alpha$与局部Lorentz坐标系之间符合转换关系$\xi ^\mu= f^\mu (x^\alpha)$，则有 ${\rm d} \xi ^\mu = (\partial_\alpha f^\mu) {\rm d}x^\alpha$。
-可以得到
-\begin{equation}\label{eq:STinterval_diff_GR}
-\begin{array}{r@{}l}
+可以得到 \begin{equation}\label{eq:STinterval_diff_GR} \begin{array}{r@{}l}
   {\rm d}s^2 &{} = \left( \eta_ {\mu \nu} \partial_\alpha f^\mu \partial_\beta f^\nu\right){\rm d} x^\alpha {\rm d} x^\beta\\
   {\rm d}s^2 &{} = g_{\alpha\beta} {\rm d} x^\alpha {\rm d} x^\beta
 \end{array}
 \end{equation}
+这里$g_{\alpha\beta}$即为对应参考系的度规，它不一定要求位于局部惯性系中。
+
+
