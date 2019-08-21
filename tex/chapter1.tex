@@ -112,6 +112,7 @@ z'&{}=z\\
 \end{equation}
 在Lorentz变换下，${\rm d}s^2$保持不变。
 
+\section{\GR 初步}
 \subsection{张量初步}
 在相对论框架下，时间坐标t和空间坐标(x,y,z)联合起来形成一个统一的时空坐标
 $x^{\alpha} = (ct,x,y,z)$。
@@ -191,5 +192,33 @@ Einstein观察到，在Newtonian力学体系中，质量$m$这个概念出现在
 与公式\ref{eq:metric}比较，可以得到，
 $g_{\alpha\beta} = \eta_ {\mu \nu} \partial_\alpha f^\mu \partial_\beta f^\nu$
 \footnote{由于本讲义旨在提供一个精炼、逻辑上大致完整的\GR 回顾，因此无法追求数学的完整性，在\GR 的描述中，涉及到诸如指标升降等细节，恕不展开。有兴趣的同学请自行翻阅相应参考文献}
+
+\subsection{协变微分} 
+Minkowski度规描述的是平直时空，而所有非Minkowski度规对应的都是弯曲时空。
+因此在\GR 的框架下，要描述动力学，就需要运用弯曲的时空对应的数学语言，或者是非Euclidean几何(non-Euclidean geometry)
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.5\textwidth]{Two-noneuclidean-surfaces.jpg}
+\bicaption{两个非Euclidean 几何的例子}
+  {two examples of non-Euclidean geometry. Credit: https://blogs.futura-sciences.com/e-luminet/2017/09/22/non-euclidean-geometries/}
+\label{fig:nonEuclidean}
+\end{figure}
+\begin{myprop}{}{}
+  Euclidean几何的五大公设中，第五公设为{\heiti{若两条直线都与第三条直线相交，并且在同一边的内角之和小于两个直角，则这两条直线在这一边必定相交。}}。
+  这一定义相较其他公设更为冗长，并不是那么显然。
+  晚近的研究表明，将第五公设去除后，也可以构成自洽的几何体系，即所谓非Euclidean几何。
+  根据曲率的不同，可以将其分为椭圆几何（又称Riemannian 几何，任意两条直线一定相交；三角形内角和小于$180^\circ$）和双曲几何（又称Lobachevskian几何，至少可以引出两条平行线；三角形内角和大于$180^\circ$）。
+\end{myprop}
+
+在非Euclidean几何中，需要重新审视一些在Euclidean几何里习以为常的概念，比如，矢量的定义必须依赖局部的坐标系，而不同区域的坐标系之间需要经过合理的坐标变换才可以比较，因此矢量的平移也需要仔细检阅。
+
+\begin{example}
+	\soln
+不妨让我们想象一个生活在地球仪表面的二维生物（不妨假设这是一个没有厚度的蚂蚁，它只能沿着地球仪表面运动），假设这只蚂蚁从地球仪上的$(0^\circ,0^\circ)$出发（也就是本初子午线和赤道的交点），决心一路向北。
+在任意时刻，它的前进方向都是一个{\heiti{矢量}}，在起点处，这个方向指向正北。
+随着它的运动，这个矢量被不断的平移（注意，在这个二维球面空间里，矢量也只能在地球仪表面上定义）。
+当它到达北极点时，这个平移后的矢量就称为指向东西经$180^\circ$线。
+在我们的三维世界里去看的话，会发现，两个矢量的方向其实是垂直的（再继续走1/4圈的话就变成了指向南极方向，与原方向相反了）。
+\end{example}
 
 
