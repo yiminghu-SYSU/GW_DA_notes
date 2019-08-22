@@ -113,7 +113,7 @@ z'&{}=z\\
 在Lorentz变换下，${\rm d}s^2$保持不变。
 
 \section{微分几何初步}
-\subsection{张量初步}\label{sec:tensor}
+\subsection{张量(tensor)初步}\label{sec:tensor}
 在相对论框架下，时间坐标t和空间坐标(x,y,z)联合起来形成一个统一的时空坐标
 $x^{\alpha} = (ct,x,y,z)$。
 如此处的$\alpha$一般出现在坐标上标上的希腊字母，会遍历{0,1,2,3}。
@@ -252,24 +252,24 @@ Minkowski度规描述的是平直时空，而所有非Minkowski度规对应的�
 \end{equation}
 由坐标基底$\vec{e}$发生变化而引起的$\delta A^\alpha$
 \begin{equation}\label{eq:deltaA}
-  \delta A^\alpha(x) = -\Gamma^\alpha_{\mu\beta} A^\mu {\rm d}x^\beta
+  \delta A^\alpha(x) = -\Gamma^\alpha_{~\mu\beta} A^\mu {\rm d}x^\beta
 \end{equation}
-其中，$\Gamma^\alpha_{\mu\beta}$是Christoffel符号，通过它，可以得到不同位置处坐标基底之间的转换关系
+其中，$\Gamma^\alpha_{~\mu\beta}$是Christoffel符号，通过它，可以得到不同位置处坐标基底之间的转换关系
 \begin{equation}\label{eq:Christoffel}
-\frac{\partial \vec{e}_\mu}{\partial x^\beta} = \Gamma^\alpha_{\mu\beta} \vec{e}_\alpha。
+\frac{\partial \vec{e}_\mu}{\partial x^\beta} = \Gamma^\alpha_{~\mu\beta} \vec{e}_\alpha。
 \end{equation}
 
 再次强调：我们在\ref{sec:tensor}节中提到过，在坐标基底发生变化时，张量的具体分量会变化，但是张量本身不会变。
 当我们定义了矢量的平移以后，我们终于可以合理地定义矢量的（不随坐标基底变化的）导数了：可以在Q点$x+{\rm d}x$处，将$\vec{A}(x+{\rm d}x)$与从P点平移而来的$\vec{DA}(x+{\rm d}x)$进行比较。
-这样定义出来的导数，我们称之为协变导数(covariant derivative)$A^\alpha_{; \beta}$（见图\ref{fig:CovDeriv}）。
+这样定义出来的导数，我们称之为协变导数(covariant derivative)$A^\alpha_{~; \beta}$（见图\ref{fig:CovDeriv}）。
 \begin{equation}\label{eq:CovDeriv}
-A^\alpha_{; \beta} \equiv \lim_{{\rm d}x^\beta \to 0}\frac{\vec{A}^\alpha(x^\beta+{\rm d}x^\beta)-\vec{DA}^\alpha(x^\beta+{\rm d}x^\beta)}{{\rm d}x^\beta} =A^\alpha_{, \beta} + \Gamma^\alpha_{\mu\beta}A^\mu
+A^\alpha_{~; \beta} \equiv \lim_{{\rm d}x^\beta \to 0}\frac{\vec{A}^\alpha(x^\beta+{\rm d}x^\beta)-\vec{DA}^\alpha(x^\beta+{\rm d}x^\beta)}{{\rm d}x^\beta} =A^\alpha_{~, \beta} + \Gamma^\alpha_{~\mu\beta}A^\mu
 \end{equation}
-其中，$A^\alpha_{, \beta}$是普通的偏导$\partial A^\alpha/\partial x^\beta$。
+其中，$A^\alpha_{~, \beta}$是普通的偏导$\partial A^\alpha/\partial x^\beta$。
 
 通过度量张量$g_{\mu\nu}$的协变导数为0，并通过交换指标、求和，可以得到
 \begin{equation}\label{eq:ChristoffelDef}
-\Gamma _{{\alpha\beta}}^{\mu}={\frac  {1}{2}}g^{{\mu\nu}}\left({\frac  {\partial g_{{\nu\alpha}}}{\partial x^{\beta}}}+{\frac  {\partial g_{{\nu\beta}}}{\partial x^{\alpha}}}-{\frac  {\partial g_{{\alpha\beta}}}{\partial x^{\nu}}}\right),
+\Gamma ^{\mu}_{{~\alpha\beta}}={\frac  {1}{2}}g^{{\mu\nu}}\left({\frac  {\partial g_{{\nu\alpha}}}{\partial x^{\beta}}}+{\frac  {\partial g_{{\nu\beta}}}{\partial x^{\alpha}}}-{\frac  {\partial g_{{\alpha\beta}}}{\partial x^{\nu}}}\right),
 \end{equation}
 这里可以看出，不同局部之间的联系，完全由局部的度规决定。
 
@@ -291,9 +291,9 @@ Newtonian力学描述物体在惯性系中沿直线运动。
 \begin{equation}\label{eq:ParaTrans}
   \frac{{\rm d}\vec{u}}{{\rm d}\tau}=0
 \end{equation}
-带入速度定义式\ref{eq:velocity}和协变导数公式\ref{eq:CovDeriv}，可以得到
+代入速度定义式\ref{eq:velocity}和协变导数公式\ref{eq:CovDeriv}，可以得到
 \begin{equation}\label{eq:ParaTrans}
-  \frac{{\rm d}^2 x^\mu}{{\rm d}\tau^2}+ \Gamma^\mu_{\alpha\beta}\frac{{\rm d}x^\alpha}{{\rm d}\tau}\frac{{\rm d}x^\beta}{{\rm d}\tau}=0
+  \frac{{\rm d}^2 x^\mu}{{\rm d}\tau^2}+ \Gamma^\mu_{~\alpha\beta}\frac{{\rm d}x^\alpha}{{\rm d}\tau}\frac{{\rm d}x^\beta}{{\rm d}\tau}=0
 \end{equation}
 这样一条测地线描述了在\GR 框架下，Newton's second law of motion的对应：不受外力作用的物体，沿测地线运动。
 需要特别说明的是，在推导过程中，我们默认了类时的测地线，这样，每一个点对应一个原时$\tau$。
@@ -301,4 +301,56 @@ Newtonian力学描述物体在惯性系中沿直线运动。
 特别的，这样的测地线称为{\heiti{零测地线(null geodesics)}}。
 
 \section{\GR (General Relativity)初步}
-\subsection{}
+\subsection{曲率张量}
+我们之前说过，在非Euclidean 几何中，三角形内角和不等于$180^\circ$，但显然三角形需要三个顶点，并不一定能在某个足够小的局域定义。
+能不能通过对某个点的时空性质观察，局域地确定时空是否弯曲？
+答案是肯定的，借助的工具就是Riemann 张量。
+\begin{equation}\label{eq:RiemannTensor}
+  R^\alpha_{~\beta\gamma\delta}= \partial_\gamma \Gamma^{\alpha}_{~\beta \delta}- \partial_\delta\Gamma^{\alpha}_{~\beta \gamma }+\Gamma^{\alpha}_{~\mu \gamma }\Gamma^{\mu}_{~\beta \delta }-\Gamma^{\alpha}_{~\mu \delta }\Gamma^{\mu}_{~\beta \gamma } \end{equation}
+各类对称性可以消除独立分量的数目，在四维时空中，Riemann 张量一共有20个独立分量。
+
+在Riemann 张量基础上，还可以定义两个重要的张量：Ricci张量
+\begin{equation}\label{eq:RicciTensor}
+  R_{\alpha\beta} \equiv R^\mu_{~\alpha\mu\beta}
+\end{equation}
+和Einstein张量
+\begin{equation}\label{eq:RicciTensor}
+  G_{\alpha\beta} \equiv R_{\alpha\beta} -\frac{1}{2}g_{\alpha\beta}R.
+\end{equation}
+其中$R =g^{\alpha\beta}R_{\alpha\beta}$。
+
+可以证明\footnote{可以通过Bianchi恒等式证明，具体过程请参阅各参考书。}，
+\begin{equation}\label{eq:ConBianIden}
+  G^{\alpha\beta}_{~~;\beta} =0.
+\end{equation}
+上述等式有时被称为缩并Bianchi恒等式。
+
+在Newtonian引力中，
+\begin{equation}\label{eq:NewtonPoisson}
+  \nabla ^2 \left(-\frac{Gm}{r}\right) = 4\pi G \rho
+\end{equation}
+等式的左边描述引力势，等式的右边描述的是质量分布。
+在\GR 下，虽然对引力的描述改变了，Einstein认为引力是时空弯曲的表现，所以上述等式中的左边可以对应于$G_{\alpha\beta}$，而质量分布在相对论中的对应是所谓能量-动量张量$T_{\alpha\beta}$\footnote{有时候称为应力-能量张量，也称应力-能量-动量张量、能量-应力张量}。
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.7\textwidth]{StressEnergyTensor_contravariant.png}
+\bicaption{能量-动量张量的逆变分量}
+  {Contravariant components of the energy-momentum tensor Credit: https://en.wikipedia.org/wiki/File:StressEnergyTensor\_contravariant.svg}
+\label{fig:ModGrav}
+\end{figure}
+$T^{\alpha\beta}$是$\alpha$方向的动量流穿越等$x^\beta$线的分量。
+对于理想流体而言，$T^{00}$是能量密度，$T^{ii}$是压强，其他分量皆为零。
+由连续性要求可以得到
+\begin{equation}\label{eq:Continuity}
+  T^{\alpha\beta}_{~~;\beta} =0.
+\end{equation}
+ 
+面对公式\ref{eq:ConBianIden}和公式\ref{eq:Continuity}，Einstein猜测其解的形式为
+\begin{equation}\label{eq:FieldEq1}
+  G^{\alpha\beta} =kT^{\alpha\beta}
+\end{equation}
+通过在弱场情形下与Newtonian引力的比较，可以确定常数k的取值，
+\begin{equation}\label{eq:FieldEq2}
+  G^{\alpha\beta} =\frac{8\pi G}{c^4}T^{\alpha\beta}
+\end{equation}
+这就是\GR 中描述时空与质量分布关系的公式为Einstein场方程。
