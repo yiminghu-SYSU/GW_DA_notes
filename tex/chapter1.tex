@@ -112,8 +112,8 @@ z'&{}=z\\
 \end{equation}
 在Lorentz变换下，${\rm d}s^2$保持不变。
 
-\section{\GR 初步}
-\subsection{张量初步}
+\section{\GR (General Relativity)初步}
+\subsection{张量初步}\label{sec:tensor}
 在相对论框架下，时间坐标t和空间坐标(x,y,z)联合起来形成一个统一的时空坐标
 $x^{\alpha} = (ct,x,y,z)$。
 如此处的$\alpha$一般出现在坐标上标上的希腊字母，会遍历{0,1,2,3}。
@@ -154,7 +154,12 @@ $x^0= ct$的选取是使得所有的坐标都有着相同的空间量纲，而$x
 也就是说，通过公式\ref{eq:STinterval_diff_new}，我们可以把随坐标变换而改变的${\rm }x^{\alpha} $ 转化成不随坐标变换而改变的时空间隔${\rm d} s^2$。
 
 可以定义在坐标系中的矢量${\rm d}\vec{x} = \vec{e}_\alpha {\rm d}x^\alpha$。
-在坐标系变换过程中，由于坐标基底$\vec{e}_\alpha = \partial \vec{x}/ \partial x^\alpha$改变了，相应的矢量${\rm d}\vec{x} $在坐标基底上的分量${\rm d}x^\alpha$也会变化，但是矢量本身${\rm d}\vec{x} $是不变的。
+在坐标系变换过程中，由于坐标基底$\vec{e}_\alpha = \partial \vec{x}/ \partial x^\alpha$改变了，相应的矢量${\rm d}\vec{x} $在坐标基底上的分量${\rm d}x^\alpha$也会变化，但是矢量本身${\rm d}\vec{x} $是不变的
+\footnote{注意，在非Euclidean 几何中，指标的上下具有特定的含义，上指标如$x^\alpha$对应于矢量，而下指标如$\vec{x}_\alpha$对应于所谓（1-形式）one-form，有时候也称对偶矢量。
+感兴趣的读者请自行参阅\GR 方面的参考资料，在本书中恕不详细展开。}
+需要指出的是，矢量也是一种张量。
+实际上，张量也符合上述性质：当坐标基底改变时，张量在坐标基底上的分量会发生变化，但是张量本身是不变的。
+
 度规也自然地定义了在坐标系中两个矢量的内积。
 ${\rm d}\vec{x}$与自己的内积是时空间隔${\rm d}s^2$，展开得：
 \begin{equation}\label{eq:InnerProduct1}
@@ -191,9 +196,10 @@ Einstein观察到，在Newtonian力学体系中，质量$m$这个概念出现在
 \end{equation}
 与公式\ref{eq:metric}比较，可以得到，
 $g_{\alpha\beta} = \eta_ {\mu \nu} \partial_\alpha f^\mu \partial_\beta f^\nu$
-\footnote{由于本讲义旨在提供一个精炼、逻辑上大致完整的\GR 回顾，因此无法追求数学的完整性，在\GR 的描述中，涉及到诸如指标升降等细节，恕不展开。有兴趣的同学请自行翻阅相应参考文献}
+\footnote{由于本讲义旨在提供一个精炼、逻辑上大致完整的\GR 回顾，因此无法追求数学的完整性，在\GR 的描述中，涉及到诸如指标升降等细节，恕不展开。
+感兴趣的读者请自行翻阅相应参考文献}。
 
-\subsection{协变微分} 
+\subsection{协变导数} 
 Minkowski度规描述的是平直时空，而所有非Minkowski度规对应的都是弯曲时空。
 因此在\GR 的框架下，要描述动力学，就需要运用弯曲的时空对应的数学语言，或者是非Euclidean几何(non-Euclidean geometry)
 \begin{figure}[htp]
@@ -203,6 +209,7 @@ Minkowski度规描述的是平直时空，而所有非Minkowski度规对应的�
   {two examples of non-Euclidean geometry. Credit: https://blogs.futura-sciences.com/e-luminet/2017/09/22/non-euclidean-geometries/}
 \label{fig:nonEuclidean}
 \end{figure}
+
 \begin{myprop}{}{}
   Euclidean几何的五大公设中，第五公设为{\heiti{若两条直线都与第三条直线相交，并且在同一边的内角之和小于两个直角，则这两条直线在这一边必定相交。}}。
   这一定义相较其他公设更为冗长，并不是那么显然。
@@ -210,15 +217,55 @@ Minkowski度规描述的是平直时空，而所有非Minkowski度规对应的�
   根据曲率的不同，可以将其分为椭圆几何（又称Riemannian 几何，任意两条直线一定相交；三角形内角和小于$180^\circ$）和双曲几何（又称Lobachevskian几何，至少可以引出两条平行线；三角形内角和大于$180^\circ$）。
 \end{myprop}
 
-在非Euclidean几何中，需要重新审视一些在Euclidean几何里习以为常的概念，比如，矢量的定义必须依赖局部的坐标系，而不同区域的坐标系之间需要经过合理的坐标变换才可以比较，因此矢量的平移也需要仔细检阅。
+对于函数$\vec{A}(x)$的导数，我们通常定义为$\lim_{{\rm d}x \to 0}\frac{\vec{A}(x+{\rm d}x)-\vec{A}(x)}{{\rm d}x}$。
+然而在非Euclidean几何中，需要重新审视一些在Euclidean几何里习以为常的概念：比如，{\heiti{矢量}}的定义必须依赖局部的坐标系。
+如此一来，$\vec{A}(x+{\rm d}x)-\vec{A}(x)$的具体取值，就很值得玩味：如何对不在同一个位置处的两个矢量进行比较？
+在Euclidean几何中这并不是一个问题，因为可以简单的平移矢量$\vec{A}(x)$至$x+{\rm d}x$处，然后与$\vec{A}(x+{\rm d}x)$比较。
+然而，在非Euclidean几何中，矢量的平移这个概念也需要被仔细检阅。
+具体来说，平移后的矢量，不仅取决于矢量的指向，也取决于平移的路径。
 
 \begin{example}
-	\soln
-不妨让我们想象一个生活在地球仪表面的二维生物（不妨假设这是一个没有厚度的蚂蚁，它只能沿着地球仪表面运动），假设这只蚂蚁从地球仪上的$(0^\circ,0^\circ)$出发（也就是本初子午线和赤道的交点），决心一路向北。
-在任意时刻，它的前进方向都是一个{\heiti{矢量}}，在起点处，这个方向指向正北。
+
+让我们想象一个生活在地球仪表面的二维生物（不妨假设这是一个没有厚度的蚂蚁，它只能沿着地球仪表面运动），假设这只蚂蚁从地球仪上的$(0^\circ,0^\circ)$出发（也就是本初子午线和赤道的交点），决心一路向北。
+
+在任意时刻，它的前进方向都是一个矢量，在起点处，这个方向指向正北。
 随着它的运动，这个矢量被不断的平移（注意，在这个二维球面空间里，矢量也只能在地球仪表面上定义）。
 当它到达北极点时，这个平移后的矢量就称为指向东西经$180^\circ$线。
 在我们的三维世界里去看的话，会发现，两个矢量的方向其实是垂直的（再继续走1/4圈的话就变成了指向南极方向，与原方向相反了）。
 \end{example}
 
+\begin{figure}[htp]
+\centering
+\includegraphics[width=0.7\textwidth]{CovDeriv.png}
+  \bicaption{非Euclidean 几何中矢量协变导数的图示}
+  {demonstration of covariant derivative of vectors in non-Euclidean geometry. Credit: Martin Hendry}
+\label{fig:CovDeriv}
+\end{figure}
+
+如图\ref{fig:CovDeriv}所示，在$P$点处（坐标为$x^\beta$）有一矢量$\vec{A}(x)$，其坐标分量为$A^\alpha$，经过$P \to Q$的路径到达Q点（坐标为$x^\alpha+{\rm d}x^\alpha$），这时，如果保持原来的坐标分量不变，则分量依然是$A^\alpha$。
+与Euclidean 几何不同，由于不同点处坐标基底也发生了改变，因此在$x+{\rm d}x$处的$A^\alpha$并不一定与$\vec{A}(x)$平行，真正平行的矢量为$\vec{DA}(x+{\rm d}x)$，其坐标分量为$DA^\alpha$
+\begin{equation}\label{eq:parallel}
+  DA^\alpha(x+{\rm d}x) = A^\alpha(x) + \delta A^\alpha(x)
+\end{equation}
+由坐标基底$\vec{e}$发生变化而引起的$\delta A^\alpha$
+\begin{equation}\label{eq:deltaA}
+  \delta A^\alpha(x) = -\Gamma^\alpha_{\mu\beta} A^\mu {\rm d}x^\beta
+\end{equation}
+其中，$\Gamma^\alpha_{\mu\beta}$是Christoffel符号，通过它，可以得到不同位置处坐标基底之间的转换关系
+\begin{equation}\label{eq:Christoffel}
+\frac{\partial \vec{e}_\mu}{\partial x^\beta} = \Gamma^\alpha_{\mu\beta} \vec{e}_\alpha。
+\end{equation}
+
+再次强调：我们在\ref{sec:tensor}节中提到过，在坐标基底发生变化时，张量的具体分量会变化，但是张量本身不会变。
+当我们定义了矢量的平移以后，我们终于可以合理地定义矢量的（不随坐标基底变化的）导数了：可以在Q点$x+{\rm d}x$处，将$\vec{A}(x+{\rm d}x)$与从P点平移而来的$\vec{DA}(x+{\rm d}x)$进行比较。
+这样定义出来的导数，我们称之为协变导数(covariant derivative)$A^\alpha_{; \beta}$（见图\ref{fig:CovDeriv}）。
+\begin{equation}\label{eq:CovDeriv}
+A^\alpha_{; \beta} \equiv \lim_{{\rm d}x^\beta \to 0}\frac{\vec{A}^\alpha(x^\beta+{\rm d}x^\beta)-\vec{DA}^\alpha(x^\beta+{\rm d}x^\beta)}{{\rm d}x^\beta} =A^\alpha_{, \beta} + \Gamma^\alpha_{\mu\beta}A^\mu
+\end{equation}
+其中，$A^\alpha_{, \beta}$是普通的偏导$\partial A^\alpha/\partial x^\beta$。
+
+通过度量张量$g_{\mu\nu}$的协变导数为0，并通过交换指标、求和，可以得到
+\begin{equation}\label{eq:ChristoffelDef}
+\Gamma _{{\alpha\beta}}^{\mu}={\frac  {1}{2}}g^{{\mu\nu}}\left({\frac  {\partial g_{{\nu\alpha}}}{\partial x^{\beta}}}+{\frac  {\partial g_{{\nu\beta}}}{\partial x^{\alpha}}}-{\frac  {\partial g_{{\alpha\beta}}}{\partial x^{\nu}}}\right)
+\end{equation}
 
