@@ -266,6 +266,34 @@ A^\alpha_{; \beta} \equiv \lim_{{\rm d}x^\beta \to 0}\frac{\vec{A}^\alpha(x^\bet
 
 通过度量张量$g_{\mu\nu}$的协变导数为0，并通过交换指标、求和，可以得到
 \begin{equation}\label{eq:ChristoffelDef}
-\Gamma _{{\alpha\beta}}^{\mu}={\frac  {1}{2}}g^{{\mu\nu}}\left({\frac  {\partial g_{{\nu\alpha}}}{\partial x^{\beta}}}+{\frac  {\partial g_{{\nu\beta}}}{\partial x^{\alpha}}}-{\frac  {\partial g_{{\alpha\beta}}}{\partial x^{\nu}}}\right)
+\Gamma _{{\alpha\beta}}^{\mu}={\frac  {1}{2}}g^{{\mu\nu}}\left({\frac  {\partial g_{{\nu\alpha}}}{\partial x^{\beta}}}+{\frac  {\partial g_{{\nu\beta}}}{\partial x^{\alpha}}}-{\frac  {\partial g_{{\alpha\beta}}}{\partial x^{\nu}}}\right),
 \end{equation}
+这里可以看出，不同局部之间的联系，完全由局部的度规决定。
+
+\subsection{测地线(geodesics)}
+我们关心一个粒子的世界线\footnote{世界线是三位空间中“轨迹”概念的延生和对应。}，每一个原时(proper time)$\tau$的取值都可以对应一个坐标点$x^\alpha$，同时有${\rm d}\tau = \sqrt{-{\rm d}s^2}/c$。
+可以定义，在$x^\alpha$处，粒子运动的速度(切矢)为
+\begin{equation}\label{eq:velocity}
+  u^\alpha = \frac{{\rm d}x^\alpha}{{\rm d}\tau},
+\end{equation}
+不难得到
+\begin{equation}\label{eq:gmunuNorm}
+  g_{\alpha \beta}u^\alpha u^\beta = c^2  
+\end{equation}
+
+Newtonian力学描述物体在惯性系中沿直线运动。
+然而，在弯曲时空中，直线的概念消失了；而和直线概念最为接近的，就是测地线。
+我们考虑一条曲线，它的每一个点上的切矢都与前一个点上的切矢平行，这样的操作可以唯一定义一条曲线，这样的曲线叫做测地线。
+根据定义，则有
+\begin{equation}\label{eq:ParaTrans}
+  \frac{{\rm d}\vec{u}}{{\rm d}\tau}=0
+\end{equation}
+带入速度定义式\ref{eq:velocity}和协变导数公式\ref{eq:CovDeriv}，可以得到
+\begin{equation}\label{eq:ParaTrans}
+  \frac{{\rm d}^2 x^\mu}{{\rm d}\tau^2}+ \Gamma^\mu_{\alpha\beta}\frac{{\rm d}x^\alpha}{{\rm d}\tau}\frac{{\rm d}x^\beta}{{\rm d}\tau}=0
+\end{equation}
+这样一条测地线描述了在\GR 框架下，Newton's second law of motion的对应：不受外力作用的物体，沿测地线运动。
+需要特别说明的是，在推导过程中，我们默认了类时的测地线，这样，每一个点对应一个原时$\tau$。
+然而，对于类光的测地线（即，测地线上每一点的原时$\tau$都相同），将$\tau$替换成仿射参量（affine parameter）$\lambda$以后，公式\ref{eq:ParaTrans}依然成立。
+特别的，这样的测地线称为{\heiti{零测地线(null geodesics)}}。
 
