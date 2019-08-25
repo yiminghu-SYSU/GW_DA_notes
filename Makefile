@@ -6,7 +6,7 @@ BIBLIO = bib/GW_DA.bib
 
 TEMPLATE = qbook.cls qbook.cfg
 
-BYPROD = *.aux *.log *.out *.dvi *.blg *.bbl __tmp *~ tex/*.aux
+BYPROD = *.aux *.log *.out *.dvi *.blg *.bbl __tmp *~ tex/*.aux tex/*~
 
 TEX = tex/*.tex 
 
