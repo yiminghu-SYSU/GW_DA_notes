@@ -130,7 +130,7 @@ $x^0= ct$的选取是使得所有的坐标都有着相同的空间量纲，而$x
                         0 & 0 & 1 & 0\\
                         0 & 0 & 0 & 1\end{pmatrix}}
 \end{equation}
-注意到$\eta_{00} = -1$, 而$\eta_{11} = \eta_{22} = \eta_{33} = 1$，并且，根据{\heiti{Einstein 求和约定(Einstein summation convention)}}，如公式\ref{eq:STinterval_diff_new}一般，当某个希腊字母同时出现在上下标的时候，则意味着要对该字母求和。
+注意到$\eta_{00} = -1$, 而$\eta_{11} = \eta_{22} = \eta_{33} = 1$，并且，根据{\textbf{Einstein 求和约定(Einstein summation convention)}}，如公式\ref{eq:STinterval_diff_new}一般，当某个希腊字母同时出现在上下标的时候，则意味着要对该字母求和。
 
 
 \begin{myprop}{Kronecker delta}{Kronecker}
@@ -149,7 +149,7 @@ $x^0= ct$的选取是使得所有的坐标都有着相同的空间量纲，而$x
 \begin{equation}\label{eq:metric}
   {\rm d}s^2 = g_{\alpha \beta}{\rm d}x^\alpha {\rm d} x^\beta
 \end{equation}
-我们通常把$\eta_ {\alpha \beta}$称为Minkowski时空中的{\heiti{度规张量}}（metric tensor，在数学语境中通常翻译为度量张量，或者简称为Minkowski度规。
+我们通常把$\eta_ {\alpha \beta}$称为Minkowski时空中的{\textbf{度规张量}}（metric tensor，在数学语境中通常翻译为度量张量，或者简称为Minkowski度规。
 度规张量在Lorentz变换下，遵从一定的变换规则，使得公式\ref{eq:STinterval_diff_new}维持不变量。
 也就是说，通过公式\ref{eq:STinterval_diff_new}，我们可以把随坐标变换而改变的${\rm }x^{\alpha} $ 转化成不随坐标变换而改变的时空间隔${\rm d} s^2$。
 
@@ -182,7 +182,7 @@ Einstein观察到，在Newtonian力学体系中，质量$m$这个概念出现在
 拥有相同质量的物体，可以拥有完全不同的电量，由此在电场中受到不同的电磁力作用。
 然而拥有相同惯性质量$m_I$的物体，一定拥有相同的引力质量$m_G$，这也就暗示了引力作用从本质上和其他相互作用的区别。
 在\SR 的语境中，物理学家无法通过任何局部开展的实验了解自己所处的船舱是否处于均匀运动状态。
-而弱等效原理中，物理学家无法通过实验分辨船舱是在加速（由$m_I$确定，服从Newton's second law of motion）还是受到了引力作用（由$m_g$确定，服从引力作用）。 既然加速度和引力等价，那么处于自由下落状态的实验室，所开展的所有{\heiti{局域(local)}}实验结果，都将完全一样，这一点与实验室的速度、所处的位置都不相关。
+而弱等效原理中，物理学家无法通过实验分辨船舱是在加速（由$m_I$确定，服从Newton's second law of motion）还是受到了引力作用（由$m_g$确定，服从引力作用）。 既然加速度和引力等价，那么处于自由下落状态的实验室，所开展的所有{\textbf{局域(local)}}实验结果，都将完全一样，这一点与实验室的速度、所处的位置都不相关。
 这一等价性，被称为“强”等效原理。\cite{Schutz:FirstCourse}
 
 根据强等效原理，所有在局域展开的物理实验，只要转换到自由落体状态的参考系下看，都是一致的。
@@ -199,7 +199,7 @@ $g_{\alpha\beta} = \eta_ {\mu \nu} \partial_\alpha f^\mu \partial_\beta f^\nu$
 
 \begin{myprop}{Raising and Lowering of index}{RaiseLower}
   指标的上下标具有不同的含义。
-  对于一维的张量而言，指标在上时是{\heiti{矢量}}，其坐标转换关系满足逆变(contravariant)；指标在下时是{\heiti{对偶矢量}}（或1-形式），其坐标转换关系满足协变(covariant)。
+  对于一维的张量而言，指标在上时是{\textbf{矢量}}，其坐标转换关系满足逆变(contravariant)；指标在下时是{\textbf{对偶矢量}}（或1-形式），其坐标转换关系满足协变(covariant)。
   指标可以通过度规$g_{\mu\nu}$进行升降。
   首先可以定义逆变张量$g^{\mu\nu}$
 \begin{equation}\label{eq:RaiseLower} 
@@ -218,9 +218,6 @@ $g_{\alpha\beta} = \eta_ {\mu \nu} \partial_\alpha f^\mu \partial_\beta f^\nu$
 \end{myprop}
 
 
-\footnote{由于本讲义旨在提供一个精炼、逻辑上大致完整的\GR 回顾，因此无法追求数学的完整性，在\GR 的描述中，涉及到诸如指标升降等细节，恕不展开。
-感兴趣的读者请自行翻阅相应参考文献}。
-
 \subsection{协变导数} 
 Minkowski度规描述的是平直时空，而所有非Minkowski度规对应的都是弯曲时空。
 因此在\GR 的框架下，要描述动力学，就需要运用弯曲的时空对应的数学语言，或者是非Euclidean几何(non-Euclidean geometry)
@@ -235,7 +232,7 @@ Minkowski度规描述的是平直时空，而所有非Minkowski度规对应的�
 \begin{myprop}{Parallel postulate}{ParallelPostulate}
   Euclidean几何的五大公设中，第五公设为:
 
-  {\heiti{若两条直线都与第三条直线相交，并且在同一边的内角之和小于两个直角，则这两条直线在这一边必定相交。}}。
+  {\textbf{若两条直线都与第三条直线相交，并且在同一边的内角之和小于两个直角，则这两条直线在这一边必定相交。}}。
 
   这一定义相较其他公设更为冗长，并不是那么显然。
   晚近的研究表明，将第五公设去除后，也可以构成自洽的几何体系，即所谓非Euclidean几何。
@@ -243,7 +240,7 @@ Minkowski度规描述的是平直时空，而所有非Minkowski度规对应的�
 \end{myprop}
 
 对于函数$\vec{A}(x)$的导数，我们通常定义为$\lim_{{\rm d}x \to 0}\frac{\vec{A}(x+{\rm d}x)-\vec{A}(x)}{{\rm d}x}$。
-然而在非Euclidean几何中，需要重新审视一些在Euclidean几何里习以为常的概念：比如，{\heiti{矢量}}的定义必须依赖局部的坐标系。
+然而在非Euclidean几何中，需要重新审视一些在Euclidean几何里习以为常的概念：比如，{\textbf{矢量}}的定义必须依赖局部的坐标系。
 如此一来，$\vec{A}(x+{\rm d}x)-\vec{A}(x)$的具体取值，就很值得玩味：如何对不在同一个位置处的两个矢量进行比较？
 在Euclidean几何中这并不是一个问题，因为可以简单的平移矢量$\vec{A}(x)$至$x+{\rm d}x$处，然后与$\vec{A}(x+{\rm d}x)$比较。
 然而，在非Euclidean几何中，矢量的平移这个概念也需要被仔细检阅。
@@ -320,7 +317,7 @@ Newtonian力学描述物体在惯性系中沿直线运动。
 这样一条测地线描述了在\GR 框架下，Newton's second law of motion的对应：不受外力作用的物体，沿测地线运动。
 需要特别说明的是，在推导过程中，我们默认了类时的测地线，这样，每一个点对应一个原时$\tau$。
 然而，对于类光的测地线（即，测地线上每一点的原时$\tau$都相同），将$\tau$替换成仿射参量（affine parameter）$\lambda$以后，公式\ref{eq:ParaTrans}依然成立。
-特别的，这样的测地线称为{\heiti{零测地线(null geodesics)}}。
+特别的，这样的测地线称为{\textbf{零测地线(null geodesics)}}。
 
 \section{\GR (General Relativity)初步}
 \subsection{曲率张量}
@@ -328,7 +325,8 @@ Newtonian力学描述物体在惯性系中沿直线运动。
 能不能通过对某个点的时空性质观察，局域地确定时空是否弯曲？
 答案是肯定的，借助的工具就是Riemann 张量。
 \begin{equation}\label{eq:RiemannTensor}
-  R^\alpha_{~\beta\gamma\delta}= \partial_\gamma \Gamma^{\alpha}_{~\beta \delta}- \partial_\delta\Gamma^{\alpha}_{~\beta \gamma }+\Gamma^{\alpha}_{~\mu \gamma }\Gamma^{\mu}_{~\beta \delta }-\Gamma^{\alpha}_{~\mu \delta }\Gamma^{\mu}_{~\beta \gamma } \end{equation}
+  R^\alpha_{~\beta\gamma\delta}= \partial_\gamma \Gamma^{\alpha}_{~\beta \delta}- \partial_\delta\Gamma^{\alpha}_{~\beta \gamma }+\Gamma^{\alpha}_{~\mu \gamma }\Gamma^{\mu}_{~\beta \delta }-\Gamma^{\alpha}_{~\mu \delta }\Gamma^{\mu}_{~\beta \gamma } 
+\end{equation}
 各类对称性可以消除独立分量的数目，在四维时空中，Riemann 张量一共有20个独立分量。
 
 在Riemann 张量基础上，还可以定义两个重要的张量：Ricci张量
@@ -336,7 +334,7 @@ Newtonian力学描述物体在惯性系中沿直线运动。
   R_{\alpha\beta} \equiv R^\mu_{~\alpha\mu\beta}
 \end{equation}
 和Einstein张量
-\begin{equation}\label{eq:RicciTensor}
+\begin{equation}\label{eq:EinsteinTensor}
   G_{\alpha\beta} \equiv R_{\alpha\beta} -\frac{1}{2}g_{\alpha\beta}R.
 \end{equation}
 其中$R =g^{\alpha\beta}R_{\alpha\beta}$。
@@ -357,9 +355,9 @@ Newtonian力学描述物体在惯性系中沿直线运动。
 在\GR 下，虽然对引力的描述改变了，Einstein认为引力是时空弯曲的表现，所以上述等式中的左边可以对应于$G_{\alpha\beta}$，而质量分布在相对论中的对应是所谓能量-动量张量$T_{\alpha\beta}$\footnote{有时候称为应力-能量张量，也称应力-能量-动量张量、能量-应力张量}。
 \begin{figure}[htp]
 \centering
-\includegraphics[width=0.7\textwidth]{StressEnergyTensor_contravariant.png}
-\bicaption{能量-动量张量的逆变分量}
-  {Contravariant components of the energy-momentum tensor Credit: https://en.wikipedia.org/wiki/File:StressEnergyTensor\_contravariant.svg}
+\includegraphics[width=0.7\textwidth]{StressEnergyTensor.png}
+\bicaption{能量-动量张量的协变分量}
+  {Covariant components of the energy-momentum tensor Credit: https://commons.wikimedia.org/wiki/File:StressEnergyTensor.svg}
 \label{fig:ModGrav}
 \end{figure}
 $T^{\alpha\beta}$是$\alpha$方向的动量流穿越等$x^\beta$线的分量。

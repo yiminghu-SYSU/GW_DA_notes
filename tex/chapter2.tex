@@ -19,10 +19,73 @@
 \end{equation}
 当然，这样的扰动并不大，我们可以在指标升降(见\rprop{prop:RaiseLower})时，近似使用Minkowski 度规$\eta _{\alpha\beta}$而不是真实的度规$g_{\alpha\beta}$。\footnote{注，计算度规的逆变分量时除外，见\cite{Creighton2011}2.127式}
 
+由此可以计算在弱场近似下的Riemann 张量
+\begin{equation}\label{eq:RiemannTensorLin}
+  R_{\alpha\beta\gamma\delta}= \frac{1}{2}\left(- \frac{\partial^2 h_{\beta\delta}}{\partial x^\alpha \partial x^\gamma} + \frac{\partial^2 h_{\beta\gamma}}{\partial x^\alpha \partial x^\delta} + \frac{\partial^2 h_{\alpha\delta}}{\partial x^\beta \partial x^\gamma} - \frac{\partial^2 h_{\alpha\gamma}}{\partial x^\beta \partial x^\delta}  \right) + \mathcal{O}(h^2)
+\end{equation}
+其中，$h = h_\mu^{~\mu}$是$h_\mu^{~\nu}$的{\textbf{迹(trace)}}
+
+由此，线性化的Ricci张量可以写为
+\begin{equation}\label{eq:RicciTensorLin}
+\begin{array}{r@{}l}
+  R_{\alpha\beta} &{}= R_{\alpha\mu\beta} ^{\quad\ \mu}\\
+                  &{}= \frac{1}{2}\left(- \frac{\partial^2 h}{\partial x^\alpha \partial x^\beta} + \frac{\partial^2 h^\mu_{~\beta}}{\partial x^\alpha \partial x^\mu} + \frac{\partial^2 h_{\alpha}^{~\mu}}{\partial x^\mu \partial x^\beta} - \eta^{\mu\nu}\frac{\partial^2 h_{\alpha\beta}}{\partial x^\mu \partial x^\nu}  \right)+ \mathcal{O}(h^2)
+\end{array}
+\end{equation}
+
+通过变量代换，使用trace-reversed perturbation $\bar{h}_{\alpha\beta}$
+\begin{equation}\label{eq:TraRev} 
+  \bar{h}_{\alpha\beta} \equiv h_{\alpha\beta} - \frac{1}{2}\eta_{\alpha\beta}\bar{h}
+\end{equation}
+在线性化近似下，可以得到形式相对简化的Einstein张量
+\begin{equation}\label{eq:EinsteinTensorLin}
+  G_{\alpha\beta}  = \frac{1}{2}\left( \frac{\partial^2 \bar{h}^\mu_{~\beta}}{\partial x^\alpha \partial x^\mu} + \frac{\partial^2 \bar{h}^\mu_{~\alpha}}{\partial x^\mu \partial x^\beta} + \eta^{\mu\nu}\frac{\partial^2 \bar{h}_{\alpha\beta}}{\partial x^\mu \partial x^\nu} - \eta_{\alpha\beta}\frac{\partial^2 \bar{h}^{\mu\nu}}{\partial x^\mu \partial x^\nu}  \right)+ \mathcal{O}(h^2)
+\end{equation}
+
+由此，可以将现行化的Einstein场方程化为
+\begin{equation}\label{eq:EinsteinEqLin}
+  - \eta^{\mu\nu} \frac{\partial^2 \bar{h}_{\alpha\beta}}{\partial x^\mu \partial x^\nu} 
+  - \eta_{\alpha\beta}\frac{\partial^2 \bar{h}^{\mu\nu}}{\partial x^\mu \partial x^\nu} 
+  + \frac{\partial^2 \bar{h}^\mu_{~\beta}}{\partial x^\alpha \partial x^\mu} 
+  + \frac{\partial^2 \bar{h}^{\mu}_{~\alpha}}{\partial x^\mu \partial x^\beta}  
+  + \mathcal{O}(h^2) = \frac{16\pi G}{c^4} T_{\alpha\beta}
+\end{equation}
+
+值得注意的是，等式的第一项可以写为$-\Box\bar{h}_{\alpha\beta}$，其中$\Box$符号为d’Alembertian算符，也就是在平直时空中的波算符。
+
+但是，这个等式依然过于冗长。
+但实际上，\GR 是包含一定冗余的自由度的，可以通过选取合理的规范，使得公式\ref{eq:EinsteinEqLin}更简洁。
+通常，可以选取所谓Lorenz规范\footnote{注意，很多书本中错误地写作Lorentz规范，其实Lorenz和Lorentz是位科学家家}，即
+\begin{equation}\label{eq:LorenzGauge}
+  \bar{h}^{\mu\nu}_{~~,\nu} = 0
+\end{equation}
+在这样的形式下，公式\ref{eq:EinsteinEqLin}中，等式左边的后三项均变为零。
+我们也就得到了Lorenz规范下的爱因斯坦场方程
+\begin{equation}\label{eq:EinsteinEqLorenzGauge}
+  -\Box\bar{h}_{\alpha\beta}= \frac{16\pi G}{c^4} T_{\alpha\beta}
+\end{equation}
+
 \subsection{Newtonian极限}
 % Creighton and Anderson ch 2.5.2 
 % Schutz ch 8.4
 % Will ch 5.5.7
+在低速($v \ll c$)情形下，Newtonian力学可以看做是\SR 的极限情形。
+类似地，在弱场($h \ll 1$)、低速($v \ll c$)条件下，Newtonian引力也应该可以看做是\GR 的极限情形。
+这一节里，我们将展示这一点。
+
+在Newtonian极限下，我们可以得到
+
+\begin{equation}\label{eq:Density}
+  T_{00}/c^4 = \rho \qquad ({\rm mass~energy~density})
+\end{equation}
+
+\begin{equation}\label{eq:slow}
+  | T_{0i}| /c^3 \approx \rho (v/c) \ll T_{00}/c^4 \qquad ({\rm slow~motion}~v \ll c)
+\end{equation}
+
+\begin{equation}\label{eq:small}
+  | T_{ij}| /c^2 \approx p/c^2 \& \rho(v/c)^2 \ll T_{00}/c^4 \qquad ({\rm small~internal~stresses})
+\end{equation}
 
 \section{横向无迹规范}
 
