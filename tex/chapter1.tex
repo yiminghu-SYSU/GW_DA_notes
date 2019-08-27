@@ -199,9 +199,21 @@ $g_{\alpha\beta} = \eta_ {\mu \nu} \partial_\alpha f^\mu \partial_\beta f^\nu$
 
 \begin{myprop}{}{}
   指标的上下标具有不同的含义。
-  对于一维情形而言，指标在上时是{\heiti{矢量}}，其坐标转换关系满足逆变(contravariant)；指标在下时是{\heiti{对偶矢量}}或（1-形式），其坐标转换关系满足协变(covariant)。
+  对于一维的张量而言，指标在上时是{\heiti{矢量}}，其坐标转换关系满足逆变(contravariant)；指标在下时是{\heiti{对偶矢量}}（或1-形式），其坐标转换关系满足协变(covariant)。
   指标可以通过度规$g_{\mu\nu}$进行升降。
-  {\heiti{回来补充}}
+  首先可以定义逆变张量$g^{\mu\nu}$
+\begin{equation}\label{eq:RaiseLower} 
+  g^{\alpha\mu} g_{\mu\beta}=  \delta^{\alpha}_{\beta}
+\end{equation}
+  其中$\delta^{\alpha}_{\beta}$是Kronecker delta张量，数值上与公式\ref{eq:Kronecker}一致。
+  利用度规，可以实现指标的升降：
+\begin{equation}\label{eq:Raise} 
+  A^\alpha = g^{\alpha\beta} A_{\beta}  
+\end{equation}
+类似地，有
+\begin{equation}\label{eq:Lower} 
+  A_{\beta}= g_{\beta\alpha}  A^\alpha .
+\end{equation}
 
 \end{myprop}
 
