@@ -131,7 +131,9 @@ $x^0= ct$的选取是使得所有的坐标都有着相同的空间量纲，而$x
                         0 & 0 & 0 & 1\end{pmatrix}}
 \end{equation}
 注意到$\eta_{00} = -1$, 而$\eta_{11} = \eta_{22} = \eta_{33} = 1$，并且，根据{\textbf{Einstein 求和约定(Einstein summation convention)}}，如公式\ref{eq:STinterval_diff_new}一般，当某个希腊字母同时出现在上下标的时候，则意味着要对该字母求和。
-
+\begin{remark}
+  通常，约定俗成：采用希腊字母时，默认遍历{0,1,2,3}；采用英语字母时，默认遍历{1,2,3}，即只包含空间项。
+\end{remark}
 
 \begin{myprop}{Kronecker delta}{Kronecker}
   有一个特殊的张量，即所谓Kronecker delta张量
@@ -351,7 +353,7 @@ Newtonian力学描述物体在惯性系中沿直线运动。
 \begin{equation}\label{eq:NewtonPoisson}
   \nabla ^2 \left(-\frac{Gm}{r}\right) = 4\pi G \rho
 \end{equation}
-等式的左边描述引力势，等式的右边描述的是质量分布。
+等式的左边描述引力势(通常由$\Phi$表示)，等式的右边描述的是质量分布。
 在\GR 下，虽然对引力的描述改变了，Einstein认为引力是时空弯曲的表现，所以上述等式中的左边可以对应于$G_{\alpha\beta}$，而质量分布在相对论中的对应是所谓能量-动量张量$T_{\alpha\beta}$\footnote{有时候称为应力-能量张量，也称应力-能量-动量张量、能量-应力张量}。
 \begin{figure}[htp]
 \centering

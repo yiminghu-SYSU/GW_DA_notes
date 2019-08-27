@@ -60,7 +60,7 @@
   \bar{h}^{\mu\nu}_{~~,\nu} = 0
 \end{equation}
 在这样的形式下，公式\ref{eq:EinsteinEqLin}中，等式左边的后三项均变为零。
-我们也就得到了Lorenz规范下的爱因斯坦场方程
+我们也就得到了Lorenz规范下的Einstein场方程
 \begin{equation}\label{eq:EinsteinEqLorenzGauge}
   -\Box\bar{h}_{\alpha\beta}= \frac{16\pi G}{c^4} T_{\alpha\beta}
 \end{equation}
@@ -73,26 +73,51 @@
 类似地，在弱场($h \ll 1$)、低速($v \ll c$)条件下，Newtonian引力也应该可以看做是\GR 的极限情形。
 这一节里，我们将展示这一点。
 
-在Newtonian极限下，我们可以得到
-
-\begin{equation}\label{eq:Density}
-  T_{00}/c^4 = \rho \qquad ({\rm mass~energy~density})
+在Newtonian极限下，我们可以得到如下条件
+\begin{equation}\label{eq:TmunuNewton}
+\begin{array}{r@{}l}
+  T_{00}/c^4      &{} = \rho \qquad ({\rm mass~energy~density}) \\
+  | T_{0i}| /c^3  &{} \approx \rho (v/c) \ll T_{00}/c^4 \qquad ({\rm slow~motion}~v \ll c) \\
+  | T_{ij}| /c^2  &{} \approx p/c^2 \& \rho(v/c)^2 \ll T_{00}/c^4 \qquad ({\rm small~internal~stresses})
+\end{array}
 \end{equation}
 
-\begin{equation}\label{eq:slow}
-  | T_{0i}| /c^3 \approx \rho (v/c) \ll T_{00}/c^4 \qquad ({\rm slow~motion}~v \ll c)
+在低速情形下，$\partial /\partial t \approx v \partial /\partial x $是小量，由此d’Alembertian算符可以近似为空间Laplac算符$\Box \to \nabla^2$。
+因此，在Newtonian极限下，场方程退化为
+\begin{equation}\label{eq:EinsteinEqNewton}
+\begin{array}{r@{}l}
+  \nabla^2 \bar{h}_{00} &{}= -16\pi G \rho\\
+  \nabla^2 \bar{h}_{0i} &{}= 0 \\
+  \nabla^2 \bar{h}_{ij} &{}= 0 \\
+\end{array}
+\end{equation}
+这个方程组可以得到平凡解$\bar{h}_{0i} = 0$和$\bar{h}_{ij}= 0 $。
+对应公式\ref{eq:NewtonPoisson}，可以发现非平凡解$\bar{h}_{00}=2h_{00}=-4\Phi$。
+这样，我们通过Newtonian极限，印证了场方程中系数$8\pi G/c^4$的合理性。
+
+更进一步，可以得到
+\begin{equation}\label{eq:NewtonianMetric}
+  g_{\mu\nu} ={\begin{pmatrix}
+    -1-2\Phi/c^2 & 0 & 0 & 0\\
+    0 & 1-2\Phi/c^2 & 0 & 0\\ 
+    0 & 0 & 1-2\Phi/c^2 & 0\\
+    0 & 0 & 0 & 1-2\Phi/c^2\end{pmatrix}} + \mathcal{O}(\Phi^2/c^4)
 \end{equation}
 
-\begin{equation}\label{eq:small}
-  | T_{ij}| /c^2 \approx p/c^2 \& \rho(v/c)^2 \ll T_{00}/c^4 \qquad ({\rm small~internal~stresses})
-\end{equation}
 
 \section{横向无迹规范}
-
-\subsection{波动解}
+\subsection{引力波的传播}
 % Schutz cp 9.1
-% Will ch 5.5.3
 % Maggorie1 p6
+从公式\ref{eq:EinsteinEqLorenzGauge}中可以看到，在Lorenz规范下，由平直时空背景上的线性微绕引起的运动方程是波动方程，其中能量-动量张量是源项。
+在真空中，度规微绕的解就变成了波，这就是引力波。
+具体来说，这个波具有如下形式：
+\begin{equation}\label{eq:GWsolution} 
+  \bar{h}^{\alpha\beta} =  A^{\alpha\beta} \exp({\rm i} k_\alpha x^\alpha)
+\end{equation}
+注意，其中${k_\alpha}$是1-形式的(实)常数分量，而$A^{\alpha\beta}$是某个张量的常数成分。
+
+
 
 \subsection{Lorenz规范}
 % Schutz p191
