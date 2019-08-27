@@ -105,7 +105,7 @@
 \end{equation}
 
 
-\section{横向无迹规范}
+\section{横向无迹规范(Transverse Traceless gauge)}
 \subsection{引力波的传播}
 % Schutz cp 9.1
 % Maggorie1 p6
@@ -116,19 +116,24 @@
   \bar{h}^{\alpha\beta} =  A^{\alpha\beta} \exp({\rm i} k_\alpha x^\alpha)
 \end{equation}
 注意，其中${k_\alpha}$是1-形式的(实)常数分量，而$A^{\alpha\beta}$是某个张量的常数成分。
+
+不难证明，%Schutz eq. 9.1-9.5
+$k_\alpha$是一个{\textbf{零（null）}}1-形式，换句话说，矢量$k_\alpha$是零矢量（类光的），它与光子的世界线相切。
+更进一步的，可以证明%Schutz eq. 9.5-9.9
+引力波的传播速度即光速，传播过程中不包含色散。%Schutz eq. 9.5-9.10
+
 不难发现，这个解是平面波，也就是说，在满足
 \begin{equation}\label{eq:PlaneWave} 
   k_\alpha x^\alpha = k_0+\textbf{k}\cdot\textbf{x} =  {\rm const.}
 \end{equation}
 的超曲面上，$\bar{h}^{\alpha\beta} $是一个常数。
 这其中，$\textbf{k}={k^i}$。
-方便起见，可以定义$k^0=\omega$
+方便起见，可以定义$k^0=\omega$，这样，矢量$\vec{k}$的四维分量可以写成$(\omega,\textbf{k})$。
+
+在推导公式\ref{eq:EinsteinEqLorenzGauge}的过程中，用到了规范条件$\bar{h}^{\alpha\beta}_{~~,\beta} = 0$。
+同时注意，通过对波动解公式\ref{eq:GWsolution}求偏导，有$\bar{h}^{\alpha\beta}_{\quad ,\mu} $
 
 
-
-不难证明，%Schutz eq. 9.1-9.5
-$k_\alpha$是一个{\textbf{零（null）}}1-形式，换句话说，矢量$k_\alpha$是零矢量（类光的），它与光子的世界线相切。
-注意，我们在
 
 \subsection{Lorenz规范}
 % Schutz p191
