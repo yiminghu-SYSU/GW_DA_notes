@@ -23,7 +23,7 @@
 \begin{equation}\label{eq:RiemannTensorLin}
   R_{\alpha\beta\gamma\delta}= \frac{1}{2}\left(- \frac{\partial^2 h_{\beta\delta}}{\partial x^\alpha \partial x^\gamma} + \frac{\partial^2 h_{\beta\gamma}}{\partial x^\alpha \partial x^\delta} + \frac{\partial^2 h_{\alpha\delta}}{\partial x^\beta \partial x^\gamma} - \frac{\partial^2 h_{\alpha\gamma}}{\partial x^\beta \partial x^\delta}  \right) + \mathcal{O}(h^2)
 \end{equation}
-其中，$h = h_\mu^{~\mu}$是$h_\mu^{~\nu}$的{\textbf{迹(trace)}}
+其中，$h = h_\mu^{\,~\mu}$是$h_\mu^{\,~\nu}$的{\textbf{迹(trace)}}
 
 由此，线性化的Ricci张量可以写为
 \begin{equation}\label{eq:RicciTensorLin}
@@ -81,7 +81,7 @@
 \end{myprop}
 
 
-\subsection{Newtonian极限}
+\subsection{Newtonian极限}\label{sec:Newtonian}
 % Creighton and Anderson ch 2.5.2 
 % Schutz ch 8.4
 % Will ch 5.5.7
@@ -165,17 +165,21 @@ $k_\alpha$是一个{\textbf{零（null）}}1-形式，换句话说，矢量$k_\m
 这说明引力波的传播方向与其作用方向垂直，因此，引力波是横波。
 
 \subsection{TT规范下的引力波}
-% Schutz p205
 % Maggorie1 1.2
+% Schutz p205
 % Creighton and Anderson ch 3.1 
 % Will ch 11.1.5
 可以注意到，Lorenz规范并不能唯一地选取某个特定的坐标。
 实际上，通过引入额外的满足$\Box \xi_\alpha = 0$条件的$\xi_\alpha$,公式\ref{eq:GWsolution}将依然成立。
-我们可以选取具有如下形式的解
-\begin{equation}\label{eq:xi_solution} 
-  \xi_\alpha =  B_{\alpha} \exp({\rm i} k_\mu x^\mu)
+我们总可以选取$\xi_\alpha$，使得$h = h_\mu^{\,~\mu}= 0$，以及$h_{0i}(x)=0$
+对照公式\ref{eq:TraRev}，可以意识到，迹$h=0$意味着$\bar{h}_{\alpha\beta}=h_{\alpha\beta}$。
+这样，Lorenz规范下$\mu=0$的分量可以写成
+\begin{equation}\label{eq:Lorenz0} 
+  \partial^0 h_{00} +\partial^i h_{0i}= 0
 \end{equation}
-其中$B_{\alpha}$是常量，而$k^\mu$与引力波的平面波解中的
+又由于选取了$h_{0i}(x)=0$，可以得到$\partial^0 h_{00} = 0$。
+$h_{00}$就变成了不随时间变化的常数项。
+回顾\ref{sec:Newtonian}节，我们知道$h_{00}$代表了引力势$\Phi$，而静态的引力势具体取值的选取是不重要的，对于依赖时间的引力波而言，我们完全可选取$h_{00}=0$。
 
 
 \subsection{引力波的效果}
