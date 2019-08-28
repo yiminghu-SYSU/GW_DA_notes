@@ -148,8 +148,11 @@ $k_\alpha$是一个{\textbf{零（null）}}1-形式，换句话说，矢量$k_\m
 方便起见，可以定义$k^0=\omega$，这样，矢量$\vec{k}$的四维分量可以写成$(\omega,\textbf{k})$。
 \begin{myprop}{Plane Wave}{PlaneWave}
   % Schutz  p204
-  在物理学领域，经常采用类似$A^{\alpha\beta} \exp({\rm i} k_\mu x^\mu)$形式的平面波解。
-  当然，
+  在物理学领域，经常采用类似$A^{\alpha\beta} \exp({\rm i} k_\mu x^\mu)$形式的平面波解，这其中，$A^{\alpha\beta}$可以是复的，而我们通常仅选取解的实部。
+
+  当然，现实情况中我们感兴趣的波很可能更为复杂，而不是单频的平面波波。
+  然而，根据Fourier分析的定理，可以证明，任何满足波动方程（公式\ref{eq:EinsteinEqLorenzGauge}）和Lorenz规范（公式\ref{eq:LorenzGauge}）的解，都可以看作是平面波解的叠加。
+  因此，本章中引力波部分的讨论均基于平面波。
 \end{myprop}
 
 在推导公式\ref{eq:EinsteinEqLorenzGauge}的过程中，用到了规范条件$\bar{h}^{\alpha\beta}_{~~,\beta} = 0$。
