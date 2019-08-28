@@ -17,7 +17,7 @@
 \begin{equation}\label{eq:LinearMetric} 
   g_{\alpha\beta}=  \eta _{\alpha\beta} + h_{\alpha\beta}
 \end{equation}
-当然，这样的扰动并不大，我们可以在指标升降(见\rprop{prop:RaiseLower})时，近似使用Minkowski 度规$\eta _{\alpha\beta}$而不是真实的度规$g_{\alpha\beta}$。\footnote{注，计算度规的逆变分量时除外，见\cite{Creighton2011}2.127式}
+当然，这样的扰动并不大($h \ll 1$)，我们可以在指标升降(见\rprop{prop:RaiseLower})时，近似使用Minkowski 度规$\eta _{\alpha\beta}$而不是真实的度规$g_{\alpha\beta}$。\footnote{注，计算度规的逆变分量时除外，见\cite{Creighton2011}2.127式}
 
 由此可以计算在弱场近似下的Riemann 张量
 \begin{equation}\label{eq:RiemannTensorLin}
@@ -65,6 +65,22 @@
   -\Box\bar{h}_{\alpha\beta}= \frac{16\pi G}{c^4} T_{\alpha\beta}
 \end{equation}
 
+\begin{myprop}{Gauge transformations}{GaugeTrans}
+  % Schutz 8.3 p191
+  考虑基于“矢量”$\xi^\alpha$的如下形式的坐标变换：
+\begin{equation}\label{eq:ChangeCoord}
+  x^{\alpha\prime} = x^{\alpha} + \xi^\alpha(x^\beta)
+\end{equation}
+  使得公式\ref{eq:LinearMetric}的条件依然成立。
+  当$|\xi^\alpha_{~,\beta} \ll 1|$时，通过定义$\xi_\alpha \equiv \eta_{\alpha\beta}\xi^\beta$，可以得到 
+\begin{equation}\label{eq:habChange}
+  h_{\alpha\beta} \to h_{\alpha\beta} - \xi_{\alpha,\beta}- \xi_{\beta,\alpha}
+\end{equation}
+通过合理选取“矢量”$\xi^\alpha$，可以在不改变公式物理本质的前提下，简化数学表达式。
+这就是所谓的规范变换。
+\end{myprop}
+
+
 \subsection{Newtonian极限}
 % Creighton and Anderson ch 2.5.2 
 % Schutz ch 8.4
@@ -105,8 +121,9 @@
 \end{equation}
 
 
-\section{横向无迹规范(Transverse Traceless gauge)}
+\section{引力波}
 \subsection{引力波的传播}
+% 引力波是横波 !
 % Schutz cp 9.1
 % Maggorie1 p6
 从公式\ref{eq:EinsteinEqLorenzGauge}中可以看到，在Lorenz规范下，由平直时空背景上的线性微绕引起的运动方程是波动方程，其中能量-动量张量是源项。
@@ -119,7 +136,7 @@
 
 不难证明，%Schutz eq. 9.1-9.5
 $k_\alpha$是一个{\textbf{零（null）}}1-形式，换句话说，矢量$k_\alpha$是零矢量（类光的），它与光子的世界线相切。
-更进一步的，可以证明%Schutz eq. 9.5-9.9
+更进一步的，可以证明%Schutz eq. 9.5-9.9 Maggorie 1.26
 引力波的传播速度即光速，传播过程中不包含色散。%Schutz eq. 9.5-9.10
 
 不难发现，这个解是平面波，也就是说，在满足
@@ -139,15 +156,13 @@ $k_\alpha$是一个{\textbf{零（null）}}1-形式，换句话说，矢量$k_\a
 这给了$A^{\alpha\beta} $限制条件，它必须与$\vec{k}$正交。
 这说明引力波的传播方向与其作用方向垂直，因此，引力波是横波。
 
-\subsection{Lorenz规范}
-% Schutz p191
-% Will ch 5.5.3
-
 \subsection{TT规范下的引力波}
 % Maggorie1 1.2
 % Creighton and Anderson ch 3.1 
 % Schutz p205
 % Will ch 11.1.5
+
+
 
 \subsection{引力波的效果}
 % Will ch 11.1.7-8
