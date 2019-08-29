@@ -112,90 +112,90 @@
 这样，我们通过Newtonian极限，印证了场方程中系数$8\pi G/c^4$的合理性。
 
 更进一步，可以得到
-\begin{equation}\label{eq:newtonianmetric}
+\begin{equation}\label{eq:NewtonianMetric}
   g_{\mu\nu} ={\begin{pmatrix}
-    -1-2\phi/c^2 & 0 & 0 & 0\\
-    0 & 1-2\phi/c^2 & 0 & 0\\ 
-    0 & 0 & 1-2\phi/c^2 & 0\\
-    0 & 0 & 0 & 1-2\phi/c^2\end{pmatrix}} + \mathcal{o}(\phi^2/c^4)
+    -1-2\Phi/c^2 & 0 & 0 & 0\\
+    0 & 1-2\Phi/c^2 & 0 & 0\\ 
+    0 & 0 & 1-2\Phi/c^2 & 0\\
+    0 & 0 & 0 & 1-2\Phi/c^2\end{pmatrix}} + \mathcal{O}(\Phi^2/c^4)
 \end{equation}
 
 
 \section{引力波}
 \subsection{引力波的传播}
 % 引力波是横波 !
-% schutz cp 9.1
-% maggorie1 p6
-从公式\ref{eq:einsteineqlorenzgauge}中可以看到，在lorenz规范下，由平直时空背景上的线性微绕引起的运动方程是波动方程，其中能量-动量张量是源项。
+% Schutz cp 9.1
+% Maggorie1 p6
+从公式\ref{eq:EinsteinEqLorenzGauge}中可以看到，在Lorenz规范下，由平直时空背景上的线性微绕引起的运动方程是波动方程，其中能量-动量张量是源项。
 在真空中，度规微绕的解就变成了波，这就是引力波。
 具体来说，该方程的解具有如下形式：
-\begin{equation}\label{eq:gwsolution} 
-  \bar{h}^{\alpha\beta} =  a^{\alpha\beta} \exp({\rm i} k_\mu x^\mu)
+\begin{equation}\label{eq:GWsolution} 
+  \bar{h}^{\alpha\beta} =  A^{\alpha\beta} \exp({\rm i} k_\mu x^\mu)
 \end{equation}
-注意，其中${k_\mu}$是1-形式的(实)常数分量，而$a^{\alpha\beta}$是某个张量的常数成分。
+注意，其中${k_\mu}$是1-形式的(实)常数分量，而$A^{\alpha\beta}$是某个张量的常数成分。
 
-不难证明，%schutz eq. 9.1-9.5
+不难证明，%Schutz eq. 9.1-9.5
 $k_\alpha$是一个{\textbf{零（null）}}1-形式，换句话说，矢量$k_\mu$是零矢量（类光的），它与光子的世界线相切。
-更进一步的，可以证明%schutz eq. 9.5-9.9 maggorie 1.26
-引力波的传播速度即光速，传播过程中不包含色散。%schutz eq. 9.5-9.10
+更进一步的，可以证明%Schutz eq. 9.5-9.9 Maggorie 1.26
+引力波的传播速度即光速，传播过程中不包含色散。%Schutz eq. 9.5-9.10
 
 不难发现，这个解是平面波，也就是说，在满足
-\begin{equation}\label{eq:planewave} 
+\begin{equation}\label{eq:PlaneWave} 
   k_\mu x^\mu = k_0+\textbf{k}\cdot\textbf{x} =  {\rm const.}
 \end{equation}
 的超曲面上，$\bar{h}^{\alpha\beta} $是一个常数。
 这其中，$\textbf{k}={k^i}$。
 方便起见，可以定义$k^0=\omega$，这样，矢量$\vec{k}$的四维分量可以写成$(\omega,\textbf{k})$。
-\begin{myprop}{plane wave}{planewave}
-  % schutz  p204
-  在物理学领域，经常采用类似$a^{\alpha\beta} \exp({\rm i} k_\mu x^\mu)$形式的平面波解，这其中，$a^{\alpha\beta}$可以是复的，而我们通常仅选取解的实部。
+\begin{myprop}{Plane Wave}{PlaneWave}
+  % Schutz  p204
+  在物理学领域，经常采用类似$A^{\alpha\beta} \exp({\rm i} k_\mu x^\mu)$形式的平面波解，这其中，$A^{\alpha\beta}$可以是复的，而我们通常仅选取解的实部。
 
   当然，现实情况中我们感兴趣的波很可能更为复杂，而不是单频的平面波波。
-  然而，根据fourier定理，可以证明，任何满足波动方程（公式\ref{eq:einsteineqlorenzgauge}）和lorenz规范（公式\ref{eq:lorenzgauge}）的解，都可以看作是平面波解的叠加。
+  然而，根据Fourier定理，可以证明，任何满足波动方程（公式\ref{eq:EinsteinEqLorenzGauge}）和Lorenz规范（公式\ref{eq:LorenzGauge}）的解，都可以看作是平面波解的叠加。
   因此，本章中引力波部分的讨论均基于平面波。
 \end{myprop}
 
-在推导公式\ref{eq:einsteineqlorenzgauge}的过程中，用到了规范条件$\bar{h}^{\alpha\beta}_{~~,\beta} = 0$。
-同时注意，通过对波动解公式\ref{eq:gwsolution}求偏导，有$\bar{h}^{\alpha\beta}_{~~ ,\mu} = {\rm i}k_\mu \bar{h}^{\alpha\beta}$。
+在推导公式\ref{eq:EinsteinEqLorenzGauge}的过程中，用到了规范条件$\bar{h}^{\alpha\beta}_{~~,\beta} = 0$。
+同时注意，通过对波动解公式\ref{eq:GWsolution}求偏导，有$\bar{h}^{\alpha\beta}_{~~ ,\mu} = {\rm i}k_\mu \bar{h}^{\alpha\beta}$。
 将上述两者结合，可以发现
-\begin{equation}\label{eq:transverse} 
-  a^{\alpha\beta} k_\alpha  = 0
+\begin{equation}\label{eq:Transverse} 
+  A^{\alpha\beta} k_\alpha  = 0
 \end{equation}
-这给了$a^{\alpha\beta} $限制条件，它必须与$\vec{k}$正交。
+这给了$A^{\alpha\beta} $限制条件，它必须与$\vec{k}$正交。
 这说明引力波的传播方向与其作用方向垂直，因此，引力波是横波。
 
 \subsection{横向无迹规范(transverse-traceless gauge)}
-% maggorie1 1.2
-% schutz p205
-% creighton and anderson ch 3.1 
-% will ch 11.1.5
-可以注意到，lorenz规范并不能唯一地选取某个特定的坐标。
-实际上，通过引入额外的满足$\box \xi_\alpha = 0$条件的$\xi_\alpha$,公式\ref{eq:gwsolution}将依然成立。
+% Maggorie1 1.2
+% Schutz p205
+% Creighton and Anderson ch 3.1 
+% Will ch 11.1.5
+可以注意到，Lorenz规范并不能唯一地选取某个特定的坐标。
+实际上，通过引入额外的满足$\Box \xi_\alpha = 0$条件的$\xi_\alpha$,公式\ref{eq:GWsolution}将依然成立。
 我们总可以选取$\xi_\alpha$，使得$h = h_\mu^{\,~\mu}= 0$，以及$h_{0i}(x)=0$。
-对照公式\ref{eq:trarev}，可以意识到，迹$h=0$意味着$\bar{h}_{\alpha\beta}=h_{\alpha\beta}$。
-这样，lorenz规范下$\mu=0$的分量可以写成
-\begin{equation}\label{eq:lorenz0} 
+对照公式\ref{eq:TraRev}，可以意识到，迹$h=0$意味着$\bar{h}_{\alpha\beta}=h_{\alpha\beta}$。
+这样，Lorenz规范下$\mu=0$的分量可以写成
+\begin{equation}\label{eq:Lorenz0} 
   \partial^0 h_{00} +\partial^i h_{0i}= 0
 \end{equation}
 又由于选取了$h_{0i}(x)=0$，可以得到$\partial^0 h_{00} = 0$。
 $h_{00}$就变成了不随时间变化的常数项。
-回顾\ref{sec:newtonian}节，我们知道$h_{00}$代表了引力势$\phi$，而静态的引力势具体取值的选取是不重要的，对于依赖时间的引力波而言，我们完全可选取$h_{00}=0$。
+回顾\ref{sec:Newtonian}节，我们知道$h_{00}$代表了引力势$\Phi$，而静态的引力势具体取值的选取是不重要的，对于依赖时间的引力波而言，我们完全可选取$h_{00}=0$。
 
 总结起来，我们有如下条件
-\begin{equation}\label{eq:ttgauge} 
+\begin{equation}\label{eq:TTgauge} 
   h^{0\mu} =0, \qquad h^{i}_{~i} =0, \qquad \partial ^{j}h_{ij} =0 
 \end{equation}
-这就是在引力波研究中经常采用的横向无迹规范(transverse-traceless gauge, tt gauge)。
+这就是在引力波研究中经常采用的横向无迹规范(transverse-traceless gauge, TT gauge)。
 注意到，由于$h_{\mu\nu}$对称，整个$4\times 4$的度规张量一共只有10个自由度。
-在采用lorenz规范后，又消减了4个自由度，剩下6个自由度。
-通过选定$\box \xi_\alpha = 0$条件的$\xi_\alpha$，进一步消减，只剩下2个自由度。
+在采用Lorenz规范后，又消减了4个自由度，剩下6个自由度。
+通过选定$\Box \xi_\alpha = 0$条件的$\xi_\alpha$，进一步消减，只剩下2个自由度。
 这两个自由度，就对应了引力波的两个极化（polarisation， 或称偏振）。
 
 从简化表达式的角度考虑，不妨将坐标基矢$e_3$方向选为平面波的波矢$\mathbf{k}_{\mu}$方向。
-由于引力波是横波$a^{\alpha\beta} k_\alpha  = 0$，这样一来，可以得到$a^{3\beta} = 0$，又由于对称性，可以得到$a^{\beta 3} = 0$。
-这样，引力波振幅张量$a_{\alpha\beta}$中所有非零的量只剩下$a_{11}$， $a_{12}$，$a_{21}$， $a_{22}$，
+由于引力波是横波$A^{\alpha\beta} k_\alpha  = 0$，这样一来，可以得到$A^{3\beta} = 0$，又由于对称性，可以得到$A^{\beta 3} = 0$。
+这样，引力波振幅张量$A_{\alpha\beta}$中所有非零的量只剩下$A_{11}$， $A_{12}$，$A_{21}$， $A_{22}$，
 
-由于无迹要求导致了$a_{11}+a_{22} = 0$，又由于对称性要求$a_{12}=a_{21}$，因此通常可以将TT gauge下的引力波张量表达为
+由于无迹要求导致了$A_{11}+A_{22} = 0$，又由于对称性要求$A_{12}=A_{21}$，因此通常可以将TT gauge下的引力波张量表达为
 \begin{equation}\label{eq:TT_hmunu}
   A_{\mu\nu}^{TT} ={\begin{pmatrix}
     0 & 0 & 0 & 0\\
@@ -205,7 +205,7 @@ $h_{00}$就变成了不随时间变化的常数项。
 \end{equation}
 
 \subsection{引力波的效果}
-% will ch 11.1.7-8
-% schutz p206-208
-% jaranowski 5.1-5.2
+% Will ch 11.1.7-8
+% Schutz p206-208
+% Jaranowski 5.1-5.2
 
