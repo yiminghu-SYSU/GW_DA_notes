@@ -57,7 +57,7 @@
 但实际上，\GR 是包含一定冗余的自由度的，可以通过选取合理的规范，使得公式\ref{eq:EinsteinEqLin}更简洁。
 通常，可以选取所谓Lorenz规范\footnote{注意，很多书本中错误地写作Lorentz规范，其实Lorenz和Lorentz是位科学家家}，即
 \begin{equation}\label{eq:LorenzGauge}
-  \bar{h}^{\mu\nu}_{~~,\nu} = 0
+  \bar{h}_{\mu\nu}_{~~,\nu} = 0
 \end{equation}
 在这样的形式下，公式\ref{eq:EinsteinEqLin}中，等式左边的后三项均变为零。
 我们也就得到了Lorenz规范下的Einstein场方程
@@ -183,12 +183,18 @@ $h_{00}$就变成了不随时间变化的常数项。
 
 总结起来，我们有如下条件
 \begin{equation}\label{eq:TTgauge} 
-  h^{0\mu} =0, \qquad h^{i}_{i} =0, \qquad \partial ^{j}h_{ij} =0 
+  h^{0\mu} =0, \qquad h^{i}_{~i} =0, \qquad \partial ^{j}h_{ij} =0 
 \end{equation}
 这就是在引力波研究中经常采用的横向无迹规范(Transverse-Traceless gauge)。
 注意到，由于$h_{\mu\nu}$对称，整个$4\times 4$的度规张量一共只有10个自由度。
 在采用Lorenz规范后，又消减了4个自由度，剩下6个自由度。
 通过选定$\Box \xi_\alpha = 0$条件的$\xi_\alpha$，进一步消减，只剩下2个自由度。
+这两个自由度，就对应了引力波的两个极化（polarisation， 或称偏振）。
+
+从简化表达式的角度考虑，不妨将坐标基矢$e_3$方向选为平面波的波矢$\mathbf{k}_{\mu}$方向。
+由于引力波是横波$A^{\alpha\beta} k_\alpha  = 0$，这样一来，可以得到$A^{3\beta} = 0$，又由于对称性，可以得到$A^{\beta 3} = 0$。
+这样，引力波振幅张量$A^{\alpha\beta}$中所有非零的量只剩下
+由此，无迹要求导致了$A_{11}+A_{22} = 0$，又由于对称性
 
 
 \subsection{引力波的效果}
