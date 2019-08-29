@@ -197,7 +197,7 @@ $h_{00}$就变成了不随时间变化的常数项。
 
 由于无迹要求导致了$A_{11}+A_{22} = 0$，又由于对称性要求$A_{12}=A_{21}$，因此通常可以将TT gauge下的引力波张量表达为
 \begin{equation}\label{eq:TT_hmunu}
-  A_{\mu\nu}^{TT} ={\begin{pmatrix}
+  h_{\mu\nu}^{TT} ={\begin{pmatrix}
     0 & 0 & 0 & 0\\
     0 & A_{11} & A_{12} & 0\\ 
     0 & A_{12} & -A_{11} & 0\\
@@ -215,8 +215,23 @@ $h_{00}$就变成了不随时间变化的常数项。
 \end{equation}
 不难发现，粒子的加速度为零，因此，对于单个粒子而言，引力波没有可观测效应。
 
-接下来，我们考虑有两个检验粒子，其相互之间以矢量 $\xi^\alpha$间隔，且以4-速度$u^\alpha$运动。
-假设两个粒子的空间间隔远小于引力波的特征波长，那么可以得到两个粒子间隔的演化由测地线偏离（geodesic deviation）公式给出
+接下来，我们考虑有两个检验粒子，假设他们在$x^1$方向上间隔$\epsilon$，我们可以看到，引力波会对两个粒子间的距离产生变化。
+两个粒子之间的{\textbf{固有距离}}是
+\begin{equation}\label{eq:PropDis2part} 
+\begin{array}{r@{}l}
+  \Delta l = \int (|{\rm d}s|^2) ^{1/2} &{}= \int (| g_{\alpha\beta}{\rm d}x^\alpha {\rm d}x^\beta|^2) ^{1/2} \\
+&{}=\int_0^\epsilon  (| g_{11}{\rm d}x^1 {\rm d}x^2|^2) ^{1/2} \\
+  &{}\approx \epsilon  | g_{11}(x^1=0)|^2) ^{1/2} \\
+  &{}\approx \epsilon  [1+ \frac{1}{2} h_{11}^{TT}(x^1=0)]
+\end{array}
+\end{equation}
+也就是说，引力波会改变两个粒子间的固有距离。
+
+下面我们来看具体的演化。
+假设两个粒子间以矢量 $\mathbf{\xi} = \xi(\sin\theta \cos \phi \mathbf{e}_1+\sin\phi\cos \theta  \mathbf{e}_2+\cos \theta  \mathbf{e}_3)$间隔，且以4-速度$u^\alpha$运动。
+如果两个粒子的空间间隔远小于引力波的特征波长，就可以得到两个粒子间隔的演化，具体来说由由测地线偏离（geodesic deviation）公式给出
 \begin{equation}\label{eq:GW2particle} 
   \frac{{\rm D}^2 \xi^\alpha}{{\rm d}s^2} = -R ^{\alpha} _{~\beta\gamma\delta} u^{\beta} \xi^\gamma u^\delta
 \end{equation}
+这其中，${\rm D}/{\rm d}s$是沿$u^\alpha$方向的协变微分，而$R ^{\alpha} _{~\beta\gamma\delta}$是Riemann张量。
+不妨
