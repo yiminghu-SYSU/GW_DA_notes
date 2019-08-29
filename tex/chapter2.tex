@@ -199,8 +199,8 @@ $h_{00}$就变成了不随时间变化的常数项。
 \begin{equation}\label{eq:TT_hmunu}
   A_{\mu\nu}^{TT} ={\begin{pmatrix}
     0 & 0 & 0 & 0\\
-    0 & A_{xx} & A_{xy} & 0\\ 
-    0 & A_{xy} & -A_{xx} & 0\\
+    0 & A_{11} & A_{12} & 0\\ 
+    0 & A_{12} & -A_{11} & 0\\
   0 & 0 & 0 & 0\end{pmatrix}}  \cos\left[ \omega (t-z/c)\right]
 \end{equation}
 
@@ -208,4 +208,12 @@ $h_{00}$就变成了不随时间变化的常数项。
 % Will ch 11.1.7-8
 % Schutz p206-208
 % Jaranowski 5.1-5.2
+由于\GR 说任何局域坐标系在自由落体状态下都可以由Minkowski度规描述，因此，作用在一个点上时，引力波的效果无法被探测到。
+考虑一个测试粒子，遵从测地线方程（公式\ref{eq:geodesics}），故此，其加速度为
+\begin{equation}\label{eq:GWparticle} 
+  \frac{{\rm d}^2 x^\mu}{{\rm d}\tau^2} = -\Gamma ^{\alpha} _{~00} = \frac{1}{2}\eta^{\alpha\beta}(h_{\beta 0,0}+h_{0\beta ,0}-h_{00,\beta })
+\end{equation}
 
+
+我们考虑有两个检验粒子，其相互之间以矢量 $\xi^\alpha$间隔，且以4-速度$u^\alpha$运动。
+假设两个粒子的空间间隔远小于引力波的特征波长，那么可以得到两个粒子的间隔由测地线偏离（geodesic deviation）公式给出
