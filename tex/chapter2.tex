@@ -151,7 +151,7 @@ $k_\alpha$是一个{\textbf{零（null）}}1-形式，换句话说，矢量$k_\m
   在物理学领域，经常采用类似$A^{\alpha\beta} \exp({\rm i} k_\mu x^\mu)$形式的平面波解，这其中，$A^{\alpha\beta}$可以是复的，而我们通常仅选取解的实部。
 
   当然，现实情况中我们感兴趣的波很可能更为复杂，而不是单频的平面波波。
-  然而，根据Fourier分析的定理，可以证明，任何满足波动方程（公式\ref{eq:EinsteinEqLorenzGauge}）和Lorenz规范（公式\ref{eq:LorenzGauge}）的解，都可以看作是平面波解的叠加。
+  然而，根据Fourier定理，可以证明，任何满足波动方程（公式\ref{eq:EinsteinEqLorenzGauge}）和Lorenz规范（公式\ref{eq:LorenzGauge}）的解，都可以看作是平面波解的叠加。
   因此，本章中引力波部分的讨论均基于平面波。
 \end{myprop}
 
@@ -164,14 +164,14 @@ $k_\alpha$是一个{\textbf{零（null）}}1-形式，换句话说，矢量$k_\m
 这给了$A^{\alpha\beta} $限制条件，它必须与$\vec{k}$正交。
 这说明引力波的传播方向与其作用方向垂直，因此，引力波是横波。
 
-\subsection{TT规范下的引力波}
+\subsection{横向无迹规范(Transverse-Traceless gauge)}
 % Maggorie1 1.2
 % Schutz p205
 % Creighton and Anderson ch 3.1 
 % Will ch 11.1.5
 可以注意到，Lorenz规范并不能唯一地选取某个特定的坐标。
 实际上，通过引入额外的满足$\Box \xi_\alpha = 0$条件的$\xi_\alpha$,公式\ref{eq:GWsolution}将依然成立。
-我们总可以选取$\xi_\alpha$，使得$h = h_\mu^{\,~\mu}= 0$，以及$h_{0i}(x)=0$
+我们总可以选取$\xi_\alpha$，使得$h = h_\mu^{\,~\mu}= 0$，以及$h_{0i}(x)=0$。
 对照公式\ref{eq:TraRev}，可以意识到，迹$h=0$意味着$\bar{h}_{\alpha\beta}=h_{\alpha\beta}$。
 这样，Lorenz规范下$\mu=0$的分量可以写成
 \begin{equation}\label{eq:Lorenz0} 
@@ -180,6 +180,15 @@ $k_\alpha$是一个{\textbf{零（null）}}1-形式，换句话说，矢量$k_\m
 又由于选取了$h_{0i}(x)=0$，可以得到$\partial^0 h_{00} = 0$。
 $h_{00}$就变成了不随时间变化的常数项。
 回顾\ref{sec:Newtonian}节，我们知道$h_{00}$代表了引力势$\Phi$，而静态的引力势具体取值的选取是不重要的，对于依赖时间的引力波而言，我们完全可选取$h_{00}=0$。
+
+总结起来，我们有如下条件
+\begin{equation}\label{eq:TTgauge} 
+  h^{0\mu} =0, \qquad h^{i}_{i} =0, \qquad \partial ^{j}h_{ij} =0 
+\end{equation}
+这就是在引力波研究中经常采用的横向无迹规范(Transverse-Traceless gauge)。
+注意到，由于$h_{\mu\nu}$对称，整个$4\times 4$的度规张量一共只有10个自由度。
+在采用Lorenz规范后，又消减了4个自由度，剩下6个自由度。
+通过选定$\Box \xi_\alpha = 0$条件的$\xi_\alpha$，进一步消减，只剩下2个自由度。
 
 
 \subsection{引力波的效果}
