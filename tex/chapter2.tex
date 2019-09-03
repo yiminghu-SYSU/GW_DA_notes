@@ -232,7 +232,7 @@ $h_{00}$就变成了不随时间变化的常数项。
 \begin{array}{r@{}l}
   \Delta l = \int (|{\rm d}s|^2) ^{1/2} &{}= \int (| g_{\alpha\beta}{\rm d}x^\alpha {\rm d}x^\beta|) ^{1/2} \\
   &{}=\int_0^\varepsilon  (| g_{11}{\rm d}x^1 {\rm d}x^1|) ^{1/2} \\
-  &{}\approx \varepsilon  | g_{11}(x^1=0)|) ^{1/2} \\ &{}\approx \varepsilon  [1+ \frac{1}{2} h_{+}^{TT}(x^1=0)]
+  &{}\approx \varepsilon  | g_{11}(x^1=0)|) ^{1/2} \\ &{}\approx \varepsilon  [1+ \frac{1}{2} h_{+}(x^1=0)]
 \end{array}
 \end{equation}
 也就是说，引力波会改变两个粒子间的固有距离。
@@ -246,10 +246,19 @@ $h_{00}$就变成了不随时间变化的常数项。
 这其中，${\rm D}/{\rm d}s$是沿$u^\alpha$方向的协变微分，而$R ^{\alpha} _{~\beta\gamma\delta}$是Riemann张量。
 在低速情形下，方程可以简化为:
 \begin{equation}\label{eq:GW2particleSimp} 
-  \frac{{\rm d}^2 \xi^j}{{\rm d}t^2} = \frac{1}{2}\left(\partial_{\tau\tau} h^{jk}_{TT}\right) \xi_k
+  \frac{{\rm d}^2 \xi^j}{{\rm d}t^2} = \frac{1}{2}\frac{\partial h^{jk}_{TT}}{\partial t^2 } \xi_k
 \end{equation}
 考虑引力波$h^{jk}_{TT}$很小的前提下，可以直接积分，得到
 \begin{equation}\label{eq:GW2particleSimp} 
   \xi^j = \xi^j (0)+\frac{1}{2}h^{jk}_{TT}(t-R/c)\xi_k(0)
 \end{equation}
-可以看到，两个粒子间的间距，同时依赖于引力波$h^{jk}_{TT}$ 和初始间距$\xi^k(0)$
+可以看到，两个粒子间的间距，同时依赖于引力波$h^{jk}_{TT}$ 和初始间距$\xi^k(0)$。
+
+将粒子间隔 $\boldsymbol{\xi}$代入，可以得到：
+\begin{equation}\label{eq:ParticleAcceleration}
+\begin{array}{r@{}l}
+  \frac{{\rm d}^2 x^1}{{\rm d}t^2} &{}= \frac{1}{2}\frac{\partial h_{+}}{\partial t^2 } \xi \sin \theta \cos \phi + \frac{1}{2}\frac{\partial h_{\times}}{\partial t^2 } \xi \sin \theta \sin \phi \\
+  \frac{{\rm d}^2 x^2}{{\rm d}t^2} &{}= \frac{1}{2}\frac{\partial h_{+}}{\partial t^2 } \xi \sin \theta \sin \phi + \frac{1}{2}\frac{\partial h_{\times}}{\partial t^2 } \xi \sin \theta \cos \phi \\
+   \frac{{\rm d}^3 x^2}{{\rm d}t^2} &{}=  0
+\end{array}
+\end{equation}
