@@ -257,8 +257,10 @@ $h_{00}$就变成了不随时间变化的常数项。
 将粒子间隔 $\boldsymbol{\xi}$代入，可以得到：
 \begin{equation}\label{eq:ParticleAcceleration}
 \begin{array}{r@{}l}
-  \frac{{\rm d}^2 x^1}{{\rm d}t^2} &{}= \frac{1}{2}\frac{\partial h_{+}}{\partial t^2 } \xi \sin \theta \cos \phi + \frac{1}{2}\frac{\partial h_{\times}}{\partial t^2 } \xi \sin \theta \sin \phi \\
-  \frac{{\rm d}^2 x^2}{{\rm d}t^2} &{}= \frac{1}{2}\frac{\partial h_{+}}{\partial t^2 } \xi \sin \theta \sin \phi + \frac{1}{2}\frac{\partial h_{\times}}{\partial t^2 } \xi \sin \theta \cos \phi \\
+  \frac{{\rm d}^2 x^1}{{\rm d}t^2} &{}= \frac{1}{2}\frac{\partial^2 }{\partial t^2 }h_{+} \, \xi \sin \theta \cos \phi + \frac{1}{2}\frac{\partial^2 }{\partial t^2 } h_{\times} \,  \xi \sin \theta \sin \phi \\
+  \frac{{\rm d}^2 x^2}{{\rm d}t^2} &{}= \frac{1}{2}\frac{\partial^2 }{\partial t^2 }h_{+} \, \xi \sin \theta \sin \phi + \frac{1}{2}\frac{\partial^2 }{\partial t^2 } h_{\times} \, \xi \sin \theta \cos \phi \\
    \frac{{\rm d}^3 x^2}{{\rm d}t^2} &{}=  0
 \end{array}
 \end{equation}
+注意到，两个粒子的距离在$z$轴上的分量保持不变，这是因为引力波是横波，而我们选用的TT规范中，引力波的传播方向为$z$轴方向。
+
