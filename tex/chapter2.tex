@@ -205,9 +205,10 @@ $h_{00}$就变成了不随时间变化的常数项。
 \end{equation}
 
 \subsection{引力波的效果}
-% Will ch 11.1.7-8
+% Will ch 11.1.6-8
 % Schutz p206-208
 % Jaranowski 5.1-5.2
+% Creighton and Anderson ch 3.1 
 由于\GR 说任何局域坐标系在自由落体状态下都可以由Minkowski度规描述，因此，作用在一个点上时，引力波的效果无法被探测到。
 考虑一个检验粒子，遵从测地线方程（公式\ref{eq:geodesics}），故此，其加速度为
 \begin{equation}\label{eq:GWparticle} 
@@ -219,19 +220,26 @@ $h_{00}$就变成了不随时间变化的常数项。
 两个粒子之间的{\textbf{固有距离}}是
 \begin{equation}\label{eq:PropDis2part} 
 \begin{array}{r@{}l}
-  \Delta l = \int (|{\rm d}s|^2) ^{1/2} &{}= \int (| g_{\alpha\beta}{\rm d}x^\alpha {\rm d}x^\beta|^2) ^{1/2} \\
-&{}=\int_0^\epsilon  (| g_{11}{\rm d}x^1 {\rm d}x^2|^2) ^{1/2} \\
-  &{}\approx \epsilon  | g_{11}(x^1=0)|^2) ^{1/2} \\
-  &{}\approx \epsilon  [1+ \frac{1}{2} h_{11}^{TT}(x^1=0)]
+  \Delta l = \int (|{\rm d}s|^2) ^{1/2} &{}= \int (| g_{\alpha\beta}{\rm d}x^\alpha {\rm d}x^\beta|) ^{1/2} \\
+  &{}=\int_0^\epsilon  (| g_{11}{\rm d}x^1 {\rm d}x^1|) ^{1/2} \\
+  &{}\approx \epsilon  | g_{11}(x^1=0)|) ^{1/2} \\ &{}\approx \epsilon  [1+ \frac{1}{2} h_{11}^{TT}(x^1=0)]
 \end{array}
 \end{equation}
 也就是说，引力波会改变两个粒子间的固有距离。
 
 下面我们来看具体的演化。
-假设两个粒子间以矢量 $\mathbf{\xi} = \xi(\sin\theta \cos \phi \mathbf{e}_1+\sin\phi\cos \theta  \mathbf{e}_2+\cos \theta  \mathbf{e}_3)$间隔，且以4-速度$u^\alpha$运动。
-如果两个粒子的空间间隔远小于引力波的特征波长，就可以得到两个粒子间隔的演化，具体来说由由测地线偏离（geodesic deviation）公式给出
+假设两个粒子间以矢量 $\boldsymbol{\xi} = \xi(\sin\theta \cos \phi \,\mathbf{e}_1+\sin\phi\cos \theta \, \mathbf{e}_2+\cos \theta  \,\mathbf{e}_3)$间隔，且以4-速度$u^\alpha$运动。
+如果两个粒子的空间间隔远小于引力波的特征波长，就可以得到两个粒子间隔的演化，具体来说由测地线偏离（geodesic deviation）公式给出
 \begin{equation}\label{eq:GW2particle} 
   \frac{{\rm D}^2 \xi^\alpha}{{\rm d}s^2} = -R ^{\alpha} _{~\beta\gamma\delta} u^{\beta} \xi^\gamma u^\delta
 \end{equation}
 这其中，${\rm D}/{\rm d}s$是沿$u^\alpha$方向的协变微分，而$R ^{\alpha} _{~\beta\gamma\delta}$是Riemann张量。
-不妨
+在低速情形下，方程可以简化为:
+\begin{equation}\label{eq:GW2particleSimp} 
+  \frac{{\rm d}^2 \xi^j}{{\rm d}t^2} = \frac{1}{2}\left(\partial_{\tau\tau} h^{jk}_{TT}\right) \xi_k
+\end{equation}
+考虑引力波$h^{jk}_{TT}$很小的前提下，可以直接积分，得到
+\begin{equation}\label{eq:GW2particleSimp} 
+  \xi^j = \xi^j (0)+\frac{1}{2}h^{jk}_{TT}(t-R/c)\xi_k(0)
+\end{equation}
+可以看到，两个粒子间的间距，同时依赖于引力波$h^{jk}_{TT}$ 和初始间距$\xi^k(0)$
